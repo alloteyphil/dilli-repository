@@ -13,8 +13,9 @@ const Navbar = () => {
         </div>
         <Image src={logo} alt="logo" className="scale-90" />
         <div className="flex items-center gap-10">
-          <Link href="/event-catering">
+          <Link href="/event-catering" className="group relative">
             <p className="min-w-max">Event Catering</p>
+            <span className="link-underline" />
           </Link>
           <Button href="/reservation">Get in touch</Button>
         </div>
