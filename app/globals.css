@@ -17,16 +17,26 @@
   src: url("/font/anton.ttf") format("truetype-variations");
 }
 
+@font-face {
+  font-family: Argine;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/font/Argine.otf") format("opentype");
+}
+
 @theme {
   /* Colors */
   --color-primary: #b4751d;
   --color-secondary: #fff5e2;
   --color-accent: #4a4e00;
   --color-accent-dark: #3e4100;
+  --color-primary-light: #f6c164;
 
   /* Fonts */
   --font-primary: "Thunder", sans-serif;
   --font-secondary: "Anton", sans-serif;
+  --font-signature: "Argine", sans-serif;
 }
 
 @layer base {
@@ -50,5 +60,8 @@
   }
   .link-underline {
     @apply bg-accent absolute bottom-0 left-0 h-0.5 w-full origin-right scale-x-0 transition-transform duration-300 ease-in-out group-hover:origin-left group-hover:scale-x-100;
+  }
+  .font-script {
+    @apply font-signature font-normal lowercase;
   }
 }
