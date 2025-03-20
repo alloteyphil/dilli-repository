@@ -28,7 +28,7 @@ const AboutImages = () => {
           className="absolute inset-1/2 z-100 size-28 -translate-x-1/2 -translate-y-1/2"
           alt="spark"
         />
-        <div className="border-secondary absolute inset-0 z-10 size-full scale-85 rounded-full border" />
+        <div className="border-secondary absolute inset-[25px] rounded-full border" />
       </div>
 
       <Image src={aboutImage4} alt="about-image-4" />

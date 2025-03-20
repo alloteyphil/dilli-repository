@@ -29,6 +29,7 @@
   /* Colors */
   --color-primary: #b4751d;
   --color-secondary: #fff5e2;
+  --color-secondary-dark: #f8edd9;
   --color-accent: #4a4e00;
   --color-accent-dark: #3e4100;
   --color-primary-light: #f6c164;
@@ -41,7 +42,7 @@
 
 @layer base {
   h1 {
-    @apply font-secondary selection:bg-accent uppercase;
+    @apply font-secondary selection:bg-accent tracking-tight uppercase;
   }
 
   h2,

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="bg-secondary px-2 pt-10 pb-[72px]">
       <div className="relative mx-auto w-[1600px] max-w-[1600px]">
-        <h1 className="text-primary text-center text-[200px] leading-[0.9] tracking-tight">
+        <h1 className="text-primary text-center text-[200px] leading-[0.9]">
           A Food Tale of Two Cities - Old Delhi & New Delhi, india.
         </h1>
         <Image
