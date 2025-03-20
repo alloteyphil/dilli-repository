@@ -17,7 +17,9 @@ const Navbar = () => {
             <p className="min-w-max">Event Catering</p>
             <span className="link-underline" />
           </Link>
-          <Button href="/reservation">Get in touch</Button>
+          <Button variant="outline" href="/reservation">
+            Get in touch
+          </Button>
         </div>
       </div>
     </div>
