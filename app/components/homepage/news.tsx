@@ -12,8 +12,8 @@ const News = () => {
     <div className="bg-secondary-dark py-[72px]">
       <div className="boxed flex flex-col items-center gap-10">
         <div className="relative max-w-max">
-          <h1 className="text-accent text-[200px] leading-none">as seen on</h1>
-          <p className="text-primary-light font-script absolute top-15 left-1/2 min-w-max -translate-x-1/2 rotate-[-5deg] text-8xl">
+          <h1 className="text-accent text-[148px] leading-none">as seen on</h1>
+          <p className="text-primary-light font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-5deg] text-8xl">
             Read all about
           </p>
         </div>

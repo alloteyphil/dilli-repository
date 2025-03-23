@@ -1,0 +1,111 @@
+export const products = [
+  {
+    name: "DD OLIVE GREEN OVERSIZED TEE",
+    slug: "dd-olive-green-oversized-tee",
+    description:
+      "Classic oversized t-shirt in olive green with embroidered logo. Made from 100% organic cotton.",
+    price: 45,
+    image: "/images/product1.png",
+    variants: ["S", "M", "L"],
+    category: "shirts",
+    isActive: true,
+  },
+  {
+    name: "DD VINTAGE BLACK HOODIE",
+    slug: "dd-vintage-black-hoodie",
+    description:
+      "Premium heavyweight hoodie with vintage wash effect. Features front pocket and adjustable drawstrings.",
+    price: 75,
+    image: "/images/product2.png",
+    variants: ["S", "M", "L"],
+    category: "hoodies",
+    isActive: true,
+  },
+  {
+    name: "DD SIGNATURE BEANIE",
+    slug: "dd-signature-beanie",
+    description:
+      "Warm knitted beanie with embroidered logo. One size fits most.",
+    price: 25,
+    image: "/images/product3.png",
+    variants: ["One Size"],
+    category: "accessories",
+    isActive: true,
+  },
+  {
+    name: "DD WHITE ESSENTIAL TEE",
+    slug: "dd-white-essential-tee",
+    description:
+      "Classic white t-shirt with minimalist design. Perfect for everyday wear.",
+    price: 40,
+    image: "/images/product1.png",
+    variants: ["S", "M", "L"],
+    category: "shirts",
+    isActive: true,
+  },
+  {
+    name: "DD GREY PULLOVER HOODIE",
+    slug: "dd-grey-pullover-hoodie",
+    description:
+      "Comfortable pullover hoodie in heather grey. Features kangaroo pocket.",
+    price: 70,
+    image: "/images/product2.png",
+    variants: ["S", "M", "L"],
+    category: "hoodies",
+    isActive: true,
+  },
+  {
+    name: "DD LOGO CAP",
+    slug: "dd-logo-cap",
+    description:
+      "6-panel structured cap with embroidered logo. Adjustable strap closure.",
+    price: 35,
+    image: "/images/product3.png",
+    variants: ["One Size"],
+    category: "accessories",
+    isActive: true,
+  },
+  {
+    name: "DD BLACK BASIC TEE",
+    slug: "dd-black-basic-tee",
+    description:
+      "Essential black t-shirt made from premium cotton. Classic fit.",
+    price: 40,
+    image: "/images/product1.png",
+    variants: ["S", "M", "L"],
+    category: "shirts",
+    isActive: true,
+  },
+  {
+    name: "DD ZIP-UP HOODIE",
+    slug: "dd-zip-up-hoodie",
+    description: "Full-zip hoodie with metal zipper. Perfect for layering.",
+    price: 80,
+    image: "/images/product2.png",
+    variants: ["S", "M", "L"],
+    category: "hoodies",
+    isActive: true,
+  },
+  {
+    name: "DD CANVAS TOTE",
+    slug: "dd-canvas-tote",
+    description:
+      "Durable canvas tote bag with screen printed design. Perfect for everyday use.",
+    price: 30,
+    image: "/images/product3.png",
+    variants: ["One Size"],
+    category: "accessories",
+    isActive: true,
+  },
+  {
+    name: "DD NAVY STRIPED TEE",
+    slug: "dd-navy-striped-tee",
+    description:
+      "Classic striped t-shirt in navy and white. Made from soft cotton blend.",
+    price: 45,
+    image: "/images/product1.png",
+    variants: ["S", "M", "L"],
+    category: "shirts",
+    isActive: true,
+  },
+];

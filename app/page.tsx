@@ -4,6 +4,7 @@ import OurStory from "./components/homepage/our-story";
 import MenuSection from "./components/homepage/menu-section";
 import Testimonials from "./components/homepage/testimonials";
 import News from "./components/homepage/news";
+import Merchandise from "./components/homepage/merchandise";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <MenuSection />
       <Testimonials />
       <News />
+      <Merchandise />
     </div>
   );
 };

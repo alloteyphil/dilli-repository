@@ -6,10 +6,10 @@ const Testimonials = () => {
     <div className="bg-primary flex flex-col gap-10 py-[72px]">
       <div className="boxed">
         <div className="relative flex max-w-max flex-col items-center gap-10">
-          <h1 className="text-primary-light text-[200px] leading-none">
+          <h1 className="text-primary-light text-[148px] leading-none">
             loved by people
           </h1>
-          <p className="text-secondary font-script absolute top-15 left-1/2 min-w-max -translate-x-1/2 rotate-[-5deg] text-8xl">
+          <p className="text-secondary font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-5deg] text-8xl">
             what people are saying
           </p>
         </div>
