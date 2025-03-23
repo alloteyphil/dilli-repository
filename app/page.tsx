@@ -1,6 +1,9 @@
 import Hero from "./components/homepage/hero";
 import About from "./components/homepage/about";
 import OurStory from "./components/homepage/our-story";
+import MenuSection from "./components/homepage/menu-section";
+import Testimonials from "./components/homepage/testimonials";
+import News from "./components/homepage/news";
 
 const page = () => {
   return (
@@ -8,6 +11,9 @@ const page = () => {
       <Hero />
       <About />
       <OurStory />
+      <MenuSection />
+      <Testimonials />
+      <News />
     </div>
   );
 };
