@@ -78,12 +78,12 @@ const NewsCard = ({
         />
       </div>
       <div className="flex max-w-[400px] flex-col gap-2">
-        <Link href={link} className="text-primary">
+        <Link href={link} target="_blank" className="text-primary">
           <p className="hover:decoration-accent line-clamp-4 hover:underline">
             {description}
           </p>
         </Link>
-        <Link href={link} className="text-accent">
+        <Link href={link} target="_blank" className="text-accent">
           <p className="hover:decoration-accent hover:underline">Read more</p>
         </Link>
       </div>
