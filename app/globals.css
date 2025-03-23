@@ -57,7 +57,7 @@
 
 @layer base {
   h1 {
-    @apply font-secondary selection:bg-accent tracking-tight uppercase;
+    @apply font-secondary tracking-tight uppercase;
   }
 
   h2,
@@ -66,7 +66,7 @@
   h5,
   h6,
   p {
-    @apply font-primary selection:bg-primary text-xl font-semibold uppercase;
+    @apply font-primary text-xl font-semibold uppercase;
   }
 }
 

@@ -10,7 +10,7 @@ const OurStory = () => {
       <div className="boxed flex w-full gap-10">
         <div className="relative w-[45%]">
           <div className="relative max-w-max">
-            <h1 className="text-primary text-[148px] leading-none">
+            <h1 className="text-primary text-[148px] leading-[0.75]">
               Our Story
             </h1>
             <p className="text-accent font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-6deg] text-8xl">
@@ -20,7 +20,7 @@ const OurStory = () => {
           <Image
             src={ourStory}
             alt="our story"
-            className="absolute top-10 -left-10 scale-75"
+            className="absolute top-6 -left-10 scale-75"
           />
         </div>
         <div className="flex w-[55%] flex-col gap-10">
