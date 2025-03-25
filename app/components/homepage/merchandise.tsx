@@ -1,6 +1,5 @@
 import { getProducts } from "@/actions/get-product.actions";
 import MerchandiseCarousel from "./merchandise-carousel";
-import MerchandiseCard from "./merchandise-card";
 
 const Merchandise = async () => {
   const data = await getProducts();

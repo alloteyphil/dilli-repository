@@ -1,5 +1,3 @@
-"use client";
-
 import { testimonials } from "@/data/testimonials";
 import TestimonialsCard from "./testimonials-card";
 import icon1 from "@/public/images/testimonialIcon1.svg";

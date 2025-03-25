@@ -12,10 +12,14 @@ const MenuSection = () => {
           <h1 className="text-accent text-[148px] leading-none">
             small plates
           </h1>
-          <h1 className="text-primary text-[148px] leading-none">signatures</h1>
-          <p className="text-accent font-script absolute top-64 left-[800px] min-w-max -translate-x-1/2 -translate-y-1/2 text-8xl">
-            our specialities
-          </p>
+          <div className="relative max-w-max">
+            <h1 className="text-primary text-[148px] leading-none">
+              signatures
+            </h1>
+            <p className="text-accent font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 text-8xl">
+              our specialities
+            </p>
+          </div>
           <p className="text-primary -mt-4 max-w-92 text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.

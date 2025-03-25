@@ -12,7 +12,7 @@ export const MovingCarousel = ({
 }: {
   children: React.ReactNode;
   direction?: "left" | "right";
-  speed?: "fast" | "normal" | "slow";
+  speed?: "fast" | "normal" | "slow" | "very-slow";
   pauseOnHover?: boolean;
   className?: string;
 }) => {
@@ -60,8 +60,12 @@ export const MovingCarousel = ({
         containerRef.current.style.setProperty("--animation-duration", "20s");
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
+      } else if (speed === "slow") {
         containerRef.current.style.setProperty("--animation-duration", "80s");
+      } else if (speed === "very-slow") {
+        containerRef.current.style.setProperty("--animation-duration", "100s");
+      } else {
+        containerRef.current.style.setProperty("--animation-duration", "40s");
       }
     }
   };

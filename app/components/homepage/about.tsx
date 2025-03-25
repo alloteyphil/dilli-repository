@@ -6,13 +6,13 @@ const About = () => {
     <div className="bg-accent py-[72px]">
       <div className="flex flex-col gap-10">
         <div className="boxed grid w-full grid-cols-2">
-          <div className="relative">
+          <div className="relative max-w-max">
             <h1 className="text-secondary text-[148px] leading-none">
               About
               <br />
               Dilli Dilli
             </h1>
-            <p className="text-primary-light font-script absolute top-1/2 left-7 min-w-max -translate-y-1/2 rotate-[-6deg] text-8xl">
+            <p className="text-primary-light font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-6deg] text-8xl">
               India’s food capital
             </p>
           </div>

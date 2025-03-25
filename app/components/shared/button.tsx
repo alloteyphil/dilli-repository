@@ -8,6 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: "default" | "outline" | "outline-dark";
   href?: string;
   innerTextStyle?: string;
+  icon?: React.ReactNode;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -19,6 +20,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       href,
       onClick,
       innerTextStyle,
+      icon,
       ...props
     },
     ref,
@@ -36,14 +38,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          `max-w-max min-w-max cursor-pointer rounded-full px-5 py-2 transition-all duration-300 ${variant === "default" ? "bg-accent text-secondary hover:bg-accent-dark" : variant === "outline" ? "border-accent text-accent bg-secondary hover:bg-accent hover:text-secondary border" : "border-accent text-accent bg-primary-light hover:bg-accent hover:text-primary-light cursor-default border"}`,
+          `max-h-max max-w-max min-w-max cursor-pointer rounded-full px-5 py-2 transition-all duration-300 ${variant === "default" ? "bg-accent text-secondary hover:bg-accent-dark" : variant === "outline" ? "border-accent text-accent bg-secondary hover:bg-accent hover:text-secondary border" : "border-accent text-accent bg-primary-light hover:bg-accent hover:text-primary-light cursor-default border"}`,
           className,
         )}
         ref={ref}
         onClick={handleClick}
         {...props}
       >
-        <p className={cn("cursor-pointer", innerTextStyle)}>{children}</p>
+        {icon && icon}
+        <p className={cn("max-h-max cursor-pointer", innerTextStyle)}>
+          {children}
+        </p>
       </button>
     );
   },
