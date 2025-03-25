@@ -17,7 +17,7 @@ const News = () => {
             Read all about
           </p>
         </div>
-        <div className="relative grid grid-cols-3 gap-10">
+        <div className="relative grid w-full grid-cols-3 place-items-center">
           {news.map((item) => (
             <NewsCard
               key={item.id}
