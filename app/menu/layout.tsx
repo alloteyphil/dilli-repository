@@ -1,5 +1,5 @@
-import MenuCarousel from "../components/menu-page/menu-carousel";
-import MenuLinks from "../components/menu-page/menu-links";
+import MenuCarousel from "../components/menu/menu-carousel";
+import MenuLinks from "../components/menu/menu-links";
 
 const layout = async ({ children }: { children: React.ReactNode }) => {
   return (

@@ -80,6 +80,9 @@
   .font-script {
     @apply font-signature font-normal lowercase;
   }
+  .input {
+    @apply bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase;
+  }
 }
 
 :root {
