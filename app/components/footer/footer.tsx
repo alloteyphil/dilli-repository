@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex gap-4">
             <Button
               variant="default"
-              href=""
+              href="https://www.instagram.com/dillidillinyc?igsh=dXU3Y3BmY3Rsamsz"
               icon={
                 <Image src={instagram} alt="instagram" className="size-6" />
               }
@@ -33,7 +33,7 @@ const Footer = () => {
             </Button>
             <Button
               variant="default"
-              href=""
+              href="https://www.tiktok.com/@dilli.dilli.nyc?_t=ZT-8uy1w96X7WM&_r=1"
               icon={<Image src={tiktok} alt="tiktok" className="size-6" />}
               className="flex gap-2"
             >

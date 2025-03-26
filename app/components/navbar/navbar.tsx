@@ -1,12 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import NavLinks from "./nav-links";
 import Button from "../shared/button";
 import Link from "next/link";
 import logo from "@/public/images/logos.svg";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
-    <div className="bg-secondary">
+    <div
+      className={`bg-secondary ${pathname === "/menu" && "bg-secondary-dark"}`}
+    >
       <div className="boxed text-accent flex items-center justify-between py-8">
         <div className="min-w-max">
           <NavLinks />
