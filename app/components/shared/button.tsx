@@ -28,7 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const router = useRouter();
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      e.preventDefault();
+      href && e.preventDefault();
       onClick?.(e);
       if (href) {
         router.push(href);
