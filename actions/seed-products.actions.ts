@@ -5,7 +5,7 @@ import Category from "@/mongo/model/category.model";
 import type { CreateProductType } from "@/types/product";
 import { products } from "@/data/product";
 import Product from "@/mongo/model/product.model";
-import type { BulkWriteResult } from "mongoose/node_modules/mongodb";
+import type { BulkWriteResult } from "mongodb";
 
 export const seedProducts = async (
   product: CreateProductType[],
