@@ -1,3 +1,6 @@
+import ResyButton from "@/components/reservation/resy-button";
+import { ReservationForm } from "./reservation-form";
+
 const Reservation = () => {
   return (
     <div className="bg-secondary py-[72px]">
@@ -10,7 +13,7 @@ const Reservation = () => {
             reservations & bookings
           </p>
         </div>
-        <div className=""></div>
+        <ResyButton />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Dilli Dilli",
@@ -15,9 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="overflow-x-hidden">
         <Navbar />
         {children}
+        <Toaster />
         <Footer />
       </body>
     </html>

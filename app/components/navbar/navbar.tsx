@@ -20,13 +20,17 @@ const Navbar = () => {
         </div>
         <Image src={logo} alt="logo" className="scale-90" />
         <div className="flex items-center gap-10">
-          <Link href="/event-catering" className="group relative">
+          <Link
+            prefetch={true}
+            href="/event-catering"
+            className="group relative"
+          >
             <p className="min-w-max">Event Catering</p>
             <span className="link-underline" />
           </Link>
-          <Button variant="default" href="/contact">
-            Get in touch
-          </Button>
+          <Link prefetch={true} href="/contact" className="group relative">
+            <Button variant="default">Get in touch</Button>
+          </Link>
         </div>
       </div>
     </div>
