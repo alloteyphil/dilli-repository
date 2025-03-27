@@ -5,7 +5,7 @@ const Testimonials = () => {
   return (
     <div className="bg-primary flex flex-col gap-10 py-[72px]">
       <div className="boxed">
-        <div className="relative flex max-w-max flex-col items-center gap-10">
+        <div className="relative max-w-max">
           <h1 className="text-primary-light text-[148px] leading-none">
             loved by people
           </h1>

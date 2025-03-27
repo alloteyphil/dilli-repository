@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 const NavLinks = () => {
@@ -21,7 +19,12 @@ const NavLinks = () => {
   return (
     <div className="flex items-center gap-10">
       {links.map((link) => (
-        <Link key={link.path} href={link.path} className="group relative">
+        <Link
+          prefetch={true}
+          key={link.path}
+          href={link.path}
+          className="group relative"
+        >
           <p>{link.name}</p>
           <div className="link-underline" />
         </Link>

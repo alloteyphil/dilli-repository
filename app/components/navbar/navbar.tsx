@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`bg-secondary ${pathname === "/menu" && "bg-secondary-dark"}`}
+      className={` ${pathname.includes("/menu") ? "bg-secondary-dark" : "bg-secondary"}`}
     >
       <div className="boxed text-accent flex items-center justify-between py-8">
         <div className="min-w-max">
