@@ -1,5 +1,4 @@
 import ResyButton from "@/components/reservation/resy-button";
-import { ReservationForm } from "./reservation-form";
 
 const Reservation = () => {
   return (
