@@ -3,6 +3,7 @@
 import { menuLinks } from "@/data/menu-links";
 import Button from "../shared/button";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const MenuLinks = () => {
   const pathname = usePathname();
@@ -12,19 +13,24 @@ const MenuLinks = () => {
   return (
     <div className="flex gap-4">
       {menuLinks.map((link) => (
-        <Button
+        <Link
+          prefetch={true}
           key={link.name}
           href={`/menu${link.href}`}
-          variant={
-            !slug && link.href === "/small-plates"
-              ? "default"
-              : slug === link.href.split("/")[1]
-                ? "default"
-                : "outline"
-          }
+          className="group relative"
         >
-          {link.name}
-        </Button>
+          <Button
+            variant={
+              !slug && link.href === "/small-plates"
+                ? "default"
+                : slug === link.href.split("/")[1]
+                  ? "default"
+                  : "outline"
+            }
+          >
+            {link.name}
+          </Button>
+        </Link>
       ))}
     </div>
   );
