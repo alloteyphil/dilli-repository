@@ -16,7 +16,7 @@ const Testimonials = () => {
       </div>
       <TestimonialsCarousel />
       <div className="mt-5 flex justify-center">
-        <Button href="/reserve" variant="default">
+        <Button href="/contact#reservation" variant="default">
           Reserve A TABLE
         </Button>
       </div>

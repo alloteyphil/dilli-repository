@@ -1,11 +1,10 @@
 import React from "react";
-import Button from "../shared/button";
 import AboutImages from "./about-images";
 const About = () => {
   return (
     <div className="bg-accent py-[72px]">
       <div className="flex flex-col gap-10">
-        <div className="boxed grid w-full grid-cols-2">
+        <div className="boxed flex w-full justify-between">
           <div className="relative max-w-max">
             <h1 className="text-secondary text-[148px] leading-none">
               About
@@ -16,7 +15,7 @@ const About = () => {
               India’s food capital
             </p>
           </div>
-          <div className="flex items-start justify-between">
+          <div className="pt-6">
             <p className="text-secondary max-w-[500px]">
               <span className="italic">It all began with a vision</span> — a
               desire to share the forgotten flavors of Delhi's rich culinary
@@ -24,14 +23,9 @@ const About = () => {
               lovers and designers, knew that they wanted to create something
               exceptional.
             </p>
-            <Button variant="outline" href="#our-story">
-              View our story
-            </Button>
           </div>
         </div>
-        <div>
-          <AboutImages />
-        </div>
+        <AboutImages />
       </div>
     </div>
   );

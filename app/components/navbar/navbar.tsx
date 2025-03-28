@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center gap-10">
           <Link
             prefetch={true}
-            href="/event-catering"
+            href="/private-dining#event-dining"
             className="group relative"
           >
             <p className="min-w-max">Event Catering</p>

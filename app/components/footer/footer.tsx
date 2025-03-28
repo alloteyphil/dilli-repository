@@ -75,17 +75,23 @@ const Footer = () => {
               </div>
             </div>
             <div className="border-secondary my-auto flex max-h-max flex-col items-center justify-center gap-4 border-l py-2">
-              <p className="text-primary-light text-2xl">links</p>
+              <p className="text-primary-light text-2xl">Socials</p>
               <div className="text-secondary flex flex-col items-center">
-                <Link href="" className="hover:underline">
-                  <p>website policy</p>
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/dillidillinyc?igsh=dXU3Y3BmY3Rsamsz"
+                  className="hover:underline"
+                >
+                  <p>Instagram</p>
                 </Link>
-                <Link href="" className="hover:underline">
-                  <p>terms & conditions</p>
+                <Link
+                  target="_blank"
+                  href="https://www.tiktok.com/@dilli.dilli.nyc?_t=ZT-8uy1w96X7WM&_r=1"
+                  className="hover:underline"
+                >
+                  <p>TikTok</p>
                 </Link>
-                <Link href="" className="hover:underline">
-                  <p>privacy policy</p>
-                </Link>
+                <div className="h-[28px] w-1" />
               </div>
             </div>
           </div>

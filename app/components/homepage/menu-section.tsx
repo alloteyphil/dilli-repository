@@ -29,7 +29,7 @@ const MenuSection = () => {
           </h1>
           <h1 className="text-accent text-[148px] leading-none">sides</h1>
           <h1 className="text-accent text-[148px] leading-none">desserts</h1>
-          <Button variant="default" className="mt-10">
+          <Button variant="default" href="/menu" className="mt-10">
             View Full Menu
           </Button>
         </div>

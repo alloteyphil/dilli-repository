@@ -56,6 +56,10 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   h1 {
     @apply font-secondary tracking-tight uppercase;
   }

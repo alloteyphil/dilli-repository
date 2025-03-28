@@ -7,7 +7,7 @@ import Map from "./map";
 
 const Reservation = () => {
   return (
-    <div className="bg-secondary py-[72px]">
+    <div id="reservation" className="bg-secondary py-[72px]">
       <div className="boxed relative flex flex-col items-center gap-10">
         <div className="relative max-w-max">
           <h1 className="text-primary text-[148px] leading-none">
