@@ -38,7 +38,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          `max-h-max max-w-max min-w-max cursor-pointer rounded-full px-5 py-2 transition-all duration-300 ${variant === "default" ? "bg-accent border-accent text-secondary hover:bg-accent-dark border" : variant === "outline" ? "border-accent text-accent bg-secondary hover:bg-accent hover:text-secondary border" : "border-accent text-accent bg-primary-light hover:bg-accent hover:text-primary-light cursor-default border"}`,
+          `max-h-max max-w-max min-w-max cursor-pointer rounded-full px-5 py-3 transition-all duration-300 ${variant === "default" ? "bg-accent border-accent text-secondary hover:bg-accent-dark border" : variant === "outline" ? "border-accent text-accent bg-secondary hover:bg-accent hover:text-secondary border" : "border-accent text-accent bg-primary-light hover:bg-accent hover:text-primary-light cursor-default border"}`,
           className,
         )}
         ref={ref}

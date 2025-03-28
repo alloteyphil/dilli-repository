@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden">
+      <body className="mx-auto max-w-[2500px] overflow-x-hidden">
         <Navbar />
         {children}
         <Toaster />
