@@ -2,24 +2,23 @@
 
 import { useState, useEffect } from "react";
 import CartItem from "./cart-item";
-import { getCartItems } from "@/actions/cart.actions";
+import { useCartStore } from "@/store/cartStore";
 
 const CartItems = () => {
   const [mounted, setMounted] = useState(false);
-
-  const cartItems = getCartItems();
+  const items = useCartStore((state) => state.items);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    return <div>loading</div>; // or a loading skeleton
+    return <div>loading</div>; // Or a loading skeleton
   }
 
   return (
     <div className="flex max-h-[500px] flex-col gap-6 overflow-y-auto">
-      {cartItems.map((item) => (
+      {items?.map((item) => (
         <CartItem key={`${item.id}_${item.variant}`} item={item} />
       ))}
     </div>
