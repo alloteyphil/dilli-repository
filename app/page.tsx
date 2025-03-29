@@ -15,7 +15,7 @@ const page = () => {
       <MenuSection />
       <Testimonials />
       <News />
-      {/* <Merchandise /> */}
+      <Merchandise />
     </div>
   );
 };

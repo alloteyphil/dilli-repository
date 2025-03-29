@@ -5,6 +5,7 @@ import type { Product } from "@/types/product";
 import Ellipse from "../shared/ellipse";
 import Button from "../shared/button";
 import { useState } from "react";
+import { addToCart } from "@/actions/cart.actions";
 
 const MerchandiseCard = ({ product }: { product: Product }) => {
   const [selectedVariant, setSelectedVariant] = useState(product.variants[0]);
@@ -26,14 +27,20 @@ const MerchandiseCard = ({ product }: { product: Product }) => {
 
         <Button
           variant="outline"
-          href={
-            product.variants.length > 1
-              ? `/products/${product.slug}?variant=${selectedVariant}`
-              : `/products/${product.slug}`
+          onClick={() =>
+            addToCart({
+              id: product._id,
+              name: product.name,
+              price: product.price,
+              quantity: 1,
+              image: product.image,
+              slug: product.slug,
+              variant: selectedVariant,
+            })
           }
           className="absolute bottom-8 left-1/2 z-10 w-[320px] -translate-x-1/2 translate-y-[100px] px-28 transition-transform duration-300 ease-in-out group-hover:translate-y-0"
         >
-          buy now
+          add to cart
         </Button>
       </div>
       <div className="flex w-full flex-col gap-2">
