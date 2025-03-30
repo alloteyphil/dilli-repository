@@ -17,7 +17,7 @@ export const useCartStore = create<CartStore>()(
     (set, get) => ({
       items:
         typeof window !== "undefined"
-          ? JSON.parse(localStorage.getItem("cart") || "{}").state.items
+          ? JSON.parse(localStorage.getItem("cart") || "[]")
           : [],
       addItem: (newItem: CartItem) =>
         set((state) => {
