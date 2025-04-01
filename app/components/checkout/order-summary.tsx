@@ -4,15 +4,15 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { cn } from "@/lib/utils";
 import Button from "../shared/button";
 import CartItems from "../cart/cart-items";
-import { useCartStore } from "@/store/cartStore";
-import { useEffect, useState } from "react";
+import { useCart } from "@/context/CartContext";
+import { useState } from "react";
 
 interface FormInput {
   discountCode: string;
 }
 
 const OrderSummary = () => {
-  const totalPrice = useCartStore((state) => state.totalPrice);
+  const { totalPrice } = useCart();
 
   const {
     register,
@@ -24,11 +24,7 @@ const OrderSummary = () => {
     console.log(data);
   };
 
-  const [loading, setLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+  const [loading, setLoading] = useState<boolean>(false);
 
   return (
     <div className="flex flex-col justify-between">

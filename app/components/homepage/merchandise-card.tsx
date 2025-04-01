@@ -5,10 +5,12 @@ import type { Product } from "@/types/product";
 import Ellipse from "../shared/ellipse";
 import Button from "../shared/button";
 import { useState } from "react";
-import { addToCart } from "@/actions/cart.actions";
+import { useCart } from "@/context/CartContext";
 
 const MerchandiseCard = ({ product }: { product: Product }) => {
   const [selectedVariant, setSelectedVariant] = useState(product.variants[0]);
+
+  const { addItem } = useCart();
 
   return (
     <div className="flex max-w-[361.92px] flex-col gap-4">
@@ -28,7 +30,7 @@ const MerchandiseCard = ({ product }: { product: Product }) => {
         <Button
           variant="outline"
           onClick={() =>
-            addToCart({
+            addItem({
               id: product._id,
               name: product.name,
               price: product.price,

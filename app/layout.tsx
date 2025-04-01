@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import { Toaster } from "sonner";
+import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: "Dilli Dilli",
@@ -17,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="mx-auto max-w-[2500px] overflow-x-hidden">
-        <Navbar />
-        {children}
-        <Toaster />
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          {children}
+          <Toaster />
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
