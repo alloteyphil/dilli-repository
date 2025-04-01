@@ -1,5 +1,5 @@
-import PersonalInfoCard from "../components/checkout/personal-info-card";
 import OrderSummary from "../components/checkout/order-summary";
+import CheckoutForm from "../components/checkout/checkout";
 
 const page = () => {
   return (
@@ -12,7 +12,7 @@ const page = () => {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-30">
-          <PersonalInfoCard />
+          <CheckoutForm />
           <OrderSummary />
         </div>
       </div>

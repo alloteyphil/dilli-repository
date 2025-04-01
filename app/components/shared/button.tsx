@@ -28,9 +28,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const router = useRouter();
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      href && e.preventDefault();
+      // Execute onClick handler first if it exists
       onClick?.(e);
-      if (href) {
+
+      // Then handle navigation if href exists and event wasn't prevented
+      if (href && !e.defaultPrevented) {
+        e.preventDefault();
         router.push(href);
       }
     };
@@ -38,7 +41,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          `max-h-max max-w-max min-w-max cursor-pointer rounded-full px-5 py-3 transition-all duration-300 ${variant === "default" ? "bg-accent border-accent text-secondary hover:bg-accent-dark border" : variant === "outline" ? "border-accent text-accent bg-secondary hover:bg-accent hover:text-secondary border" : "border-accent text-accent bg-primary-light hover:bg-accent hover:text-primary-light cursor-default border"}`,
+          `max-h-max max-w-max min-w-max cursor-pointer rounded-full px-5 py-3 transition-all duration-300 ${
+            variant === "default"
+              ? "bg-accent border-accent text-secondary hover:bg-accent-dark border"
+              : variant === "outline"
+                ? "border-accent text-accent bg-secondary hover:bg-accent hover:text-secondary border"
+                : "border-accent text-accent bg-primary-light hover:bg-accent hover:text-primary-light cursor-default border"
+          }`,
           className,
         )}
         ref={ref}
@@ -53,5 +62,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+
+Button.displayName = "Button";
 
 export default Button;

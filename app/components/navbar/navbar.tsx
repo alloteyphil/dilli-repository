@@ -6,6 +6,7 @@ import Button from "../shared/button";
 import Link from "next/link";
 import logo from "@/public/images/logos.svg";
 import { usePathname } from "next/navigation";
+import CartIcon from "./cart-icon";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -20,6 +21,7 @@ const Navbar = () => {
         </div>
         <Image src={logo} alt="logo" className="scale-90" />
         <div className="flex items-center gap-10">
+          <CartIcon />
           <Link
             prefetch={true}
             href="/private-dining#event-dining"

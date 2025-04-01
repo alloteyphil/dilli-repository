@@ -1,4 +1,4 @@
-import { getProducts } from "@/actions/get-product.actions";
+import { getProducts } from "@/actions/product/get-product.actions";
 import MerchandiseCarousel from "./merchandise-carousel";
 
 const Merchandise = async () => {
