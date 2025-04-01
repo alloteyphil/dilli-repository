@@ -2,6 +2,11 @@ import stripe from "stripe";
 import { NextResponse } from "next/server";
 import { createOrder } from "@/actions/order/order.actions";
 
+const webhookUrl =
+  process.env.NODE_ENV === "production"
+    ? process.env.VERCEL_URL
+    : "http://localhost:3000";
+
 export async function POST(request: Request) {
   const body = await request.text();
 

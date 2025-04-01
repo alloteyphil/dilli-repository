@@ -11,6 +11,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2025-02-24.acacia",
 });
 
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? process.env.VERCEL_URL
+    : process.env.BASE_URL;
+
 export const createCheckoutSession = async (
   items: CartItem[],
   email: string,
@@ -50,8 +55,8 @@ export const createCheckoutSession = async (
     mode: "payment",
     payment_method_types: ["card", "cashapp"],
     customer_email: email,
-    success_url: `${process.env.BASE_URL}/success`,
-    cancel_url: `${process.env.BASE_URL}/cancel`,
+    success_url: `${baseUrl}/success`,
+    cancel_url: `${baseUrl}/cancel`,
     metadata: {
       customer_name: `${shipping.first_name} ${shipping.last_name}`,
       customer_email: email,
