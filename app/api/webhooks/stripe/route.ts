@@ -2,11 +2,6 @@ import stripe from "stripe";
 import { NextResponse } from "next/server";
 import { createOrder } from "@/actions/order/order.actions";
 
-const webhookUrl =
-  process.env.NODE_ENV === "production"
-    ? process.env.VERCEL_URL
-    : "http://localhost:3000";
-
 export async function POST(request: Request) {
   const body = await request.text();
 
@@ -50,34 +45,6 @@ export async function POST(request: Request) {
     const newOrder = await createOrder(order);
     return NextResponse.json({ message: "OK", order: newOrder });
   }
-
-  const testOrderData = {
-    stripeId: "cs_test_123456789",
-    userDetails: {
-      email: "test@example.com",
-      name: "John Doe",
-      address: {
-        city: "New York",
-        address: "123 Main St",
-        address2: "Apt 4B",
-        postCode: "10001",
-      },
-    },
-    items: [
-      {
-        id: "prod_123",
-        variant: "Small",
-        quantity: 2,
-      },
-      {
-        id: "prod_456",
-        variant: "Medium",
-        quantity: 1,
-      },
-    ],
-    totalAmount: "99.99",
-    createdAt: new Date(),
-  };
 
   return new Response("", { status: 200 });
 }

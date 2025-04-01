@@ -13,7 +13,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? process.env.VERCEL_URL
+    ? "https://dilli-dilli.vercel.app"
     : process.env.BASE_URL;
 
 export const createCheckoutSession = async (
