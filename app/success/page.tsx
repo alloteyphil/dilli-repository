@@ -2,14 +2,9 @@
 
 import { useEffect } from "react";
 import { useCart } from "@/context/CartContext";
-import { useSearchParams } from "next/navigation";
 
 const SuccessPage = () => {
   const { clearCart } = useCart();
-
-  const searchParams = useSearchParams();
-
-  const sessionId = searchParams.get("session_id");
 
   useEffect(() => {
     clearCart();
