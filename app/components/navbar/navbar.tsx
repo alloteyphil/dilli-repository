@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
         <Image src={logo} alt="logo" className="scale-90" />
         <div className="flex items-center gap-10">
-          <CartIcon />
+          {process.env.NODE_ENV !== "production" && <CartIcon />}
           <Link
             prefetch={true}
             href="/private-dining#event-dining"

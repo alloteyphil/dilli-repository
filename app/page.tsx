@@ -15,7 +15,7 @@ const page = () => {
       <MenuSection />
       <Testimonials />
       <News />
-      <Merchandise />
+      {process.env.NODE_ENV !== "production" && <Merchandise />}
     </div>
   );
 };

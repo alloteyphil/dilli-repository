@@ -55,8 +55,8 @@ export const createCheckoutSession = async (
     mode: "payment",
     payment_method_types: ["card", "cashapp"],
     customer_email: email,
-    success_url: `${baseUrl}/success`,
-    cancel_url: `${baseUrl}/cancel`,
+    success_url: `${baseUrl}/order-confirmation`,
+    cancel_url: `${baseUrl}/checkout`,
     metadata: {
       customer_name: `${shipping.first_name} ${shipping.last_name}`,
       customer_email: email,

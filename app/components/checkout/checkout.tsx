@@ -57,7 +57,8 @@ const CheckoutForm = () => {
           className="flex h-full flex-col justify-between"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex flex-col gap-3">
+          {/* Contact */}
+          <div className="flex flex-col gap-6">
             <h2 className="text-primary text-4xl">Contact</h2>
             <input
               {...register("email", {
@@ -80,10 +81,15 @@ const CheckoutForm = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-3">
+
+          {/* Delivery */}
+          <div className="flex flex-col gap-6">
             <h2 className="text-primary text-4xl">Delivery</h2>
+
+            {/* Name */}
             <div className="flex w-full gap-5">
-              <div className="flex flex-col gap-2">
+              {/* First Name */}
+              <div className="flex w-full flex-col gap-2">
                 <input
                   {...register("firstName", {
                     required: "First name is required",
@@ -101,7 +107,9 @@ const CheckoutForm = () => {
                   </p>
                 )}
               </div>
-              <div className="flex flex-col gap-2">
+
+              {/* Last Name */}
+              <div className="flex w-full flex-col gap-2">
                 <input
                   {...register("lastName", {
                     required: "Last name is required",
@@ -120,7 +128,9 @@ const CheckoutForm = () => {
                 )}
               </div>
             </div>
-            <div className="flex flex-col gap-2">
+
+            {/* Address */}
+            <div className="flex w-full gap-2">
               <input
                 {...register("address", {
                   required: "Address is required",
@@ -132,6 +142,8 @@ const CheckoutForm = () => {
                 <p className="text-xs text-red-500">{errors.address.message}</p>
               )}
             </div>
+
+            {/* Address 2 */}
             <div className="flex w-full gap-5">
               <input
                 {...register("address2", {
@@ -146,8 +158,11 @@ const CheckoutForm = () => {
                 </p>
               )}
             </div>
+
+            {/* City and Post Code */}
             <div className="flex w-full gap-5">
-              <div className="flex flex-col gap-2">
+              {/* City */}
+              <div className="flex w-full flex-col gap-2">
                 <input
                   {...register("city", {
                     required: "City is required",
@@ -159,7 +174,9 @@ const CheckoutForm = () => {
                   <p className="text-xs text-red-500">{errors.city.message}</p>
                 )}
               </div>
-              <div className="flex flex-col gap-2">
+
+              {/* Post Code */}
+              <div className="flex w-full flex-col gap-2">
                 <input
                   {...register("postCode", {
                     required: "Post code is required",
@@ -175,7 +192,9 @@ const CheckoutForm = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-3">
+
+          {/* Payment */}
+          <div className="flex flex-col gap-6">
             <h2 className="text-primary text-4xl">Payment</h2>
             <div className="w-full">
               <Button
