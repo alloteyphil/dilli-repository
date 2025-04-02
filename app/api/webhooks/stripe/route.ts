@@ -29,12 +29,17 @@ export async function POST(request: Request) {
         email: metadata?.customer_email || "",
         name: metadata?.customer_name || "",
         address: {
-          city: JSON.parse(metadata?.shipping_address || "{}").city || "",
-          address: JSON.parse(metadata?.shipping_address || "{}").address || "",
+          city:
+            JSON.parse(metadata?.shipping_address || "{}").address?.city || "",
+          address:
+            JSON.parse(metadata?.shipping_address || "{}").address?.address ||
+            "",
           address2:
-            JSON.parse(metadata?.shipping_address || "{}").address2 || "",
+            JSON.parse(metadata?.shipping_address || "{}").address?.address2 ||
+            "",
           postCode:
-            JSON.parse(metadata?.shipping_address || "{}").post_code || "",
+            JSON.parse(metadata?.shipping_address || "{}").address?.post_code ||
+            "",
         },
       },
       items: JSON.parse(metadata?.items || "[]"),
