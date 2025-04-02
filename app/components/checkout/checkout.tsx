@@ -131,6 +131,8 @@ const CheckoutForm = () => {
               {errors.address && (
                 <p className="text-xs text-red-500">{errors.address.message}</p>
               )}
+            </div>
+            <div className="flex w-full gap-5">
               <input
                 {...register("address2", {
                   required: "Address is required",

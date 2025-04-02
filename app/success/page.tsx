@@ -13,7 +13,7 @@ const SuccessPage = () => {
 
   useEffect(() => {
     clearCart();
-  }, [clearCart]);
+  }, []);
 
   return (
     <div className="bg-secondary">
