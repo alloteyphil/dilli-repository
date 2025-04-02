@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const NavLinks = () => {
+const NavLinks = ({ isHome = false }: { isHome?: boolean }) => {
   const links = [
     {
       name: "Home",
@@ -25,8 +25,10 @@ const NavLinks = () => {
           href={link.path}
           className="group relative"
         >
-          <p>{link.name}</p>
-          <div className="link-underline" />
+          <p className={`${isHome ? "text-secondary" : ""}`}>{link.name}</p>
+          <div
+            className={`link-underline ${isHome ? "bg-secondary" : "bg-accent"} `}
+          />
         </Link>
       ))}
     </div>

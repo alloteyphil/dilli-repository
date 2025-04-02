@@ -79,7 +79,7 @@
     @apply mx-auto max-w-[1500px];
   }
   .link-underline {
-    @apply bg-accent absolute bottom-0 left-0 h-0.5 w-full origin-right scale-x-0 transition-transform duration-300 ease-in-out group-hover:origin-left group-hover:scale-x-100;
+    @apply absolute bottom-0 left-0 h-0.5 w-full origin-right scale-x-0 transition-transform duration-300 ease-in-out group-hover:origin-left group-hover:scale-x-100;
   }
   .font-script {
     @apply font-signature font-normal lowercase;

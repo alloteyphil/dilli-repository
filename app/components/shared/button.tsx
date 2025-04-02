@@ -41,7 +41,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(
-          `max-h-max max-w-max min-w-max cursor-pointer rounded-full px-5 py-3 transition-all duration-300 ${
+          `max-h-max min-w-max cursor-pointer rounded-full px-5 py-3 transition-all duration-300 ${
             variant === "default"
               ? "bg-accent border-accent text-secondary hover:bg-accent-dark border"
               : variant === "outline"
