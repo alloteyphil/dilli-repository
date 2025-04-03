@@ -36,6 +36,7 @@ const MobileMenuDrawer = () => {
         <div className="flex flex-col items-center justify-center gap-10 md:items-start">
           <Link
             prefetch={true}
+            scroll={false}
             href="/"
             className="text-accent"
             onClick={() => setIsOpen(false)}
@@ -53,6 +54,7 @@ const MobileMenuDrawer = () => {
           </Link>
           <Link
             prefetch={true}
+            scroll={false}
             href="/private-dining"
             className="text-accent"
             onClick={() => setIsOpen(false)}
@@ -61,6 +63,7 @@ const MobileMenuDrawer = () => {
           </Link>
           <Link
             prefetch={true}
+            scroll={false}
             href="/private-dining#event-dining"
             onClick={() => setIsOpen(false)}
           >
@@ -68,6 +71,7 @@ const MobileMenuDrawer = () => {
           </Link>
           <Link
             prefetch={true}
+            scroll={false}
             href="/contact"
             className="text-accent"
             onClick={() => setIsOpen(false)}
