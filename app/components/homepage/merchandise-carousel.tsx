@@ -15,7 +15,7 @@ const MerchandiseCarousel = ({ products }: { products: Product[] }) => {
         {products.map((product) => (
           <CarouselItem
             key={product._id}
-            className="pl-0 md:basis-1/2 lg:basis-1/3"
+            className="pl-0 lg:basis-1/2 xl:basis-1/3"
           >
             <div className="grid place-items-center">
               <MerchandiseCard product={product} />
@@ -23,8 +23,8 @@ const MerchandiseCarousel = ({ products }: { products: Product[] }) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="bg-secondary border-accent text-accent left-9 px-8 py-6" />
-      <CarouselNext className="bg-secondary border-accent text-accent right-9 px-8 py-6" />
+      <CarouselPrevious className="bg-secondary border-accent text-accent -left-3 px-8 py-6 xl:left-9" />
+      <CarouselNext className="bg-secondary border-accent text-accent -right-3 px-8 py-6 xl:right-9" />
     </Carousel>
   );
 };

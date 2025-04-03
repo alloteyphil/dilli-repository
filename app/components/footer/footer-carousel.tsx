@@ -4,7 +4,7 @@ import FooterCarouselCard from "./footer-carousel-card";
 
 const FooterCarousel = () => {
   return (
-    <div className="absolute -bottom-32 left-1/2 z-20 w-full -translate-x-1/2">
+    <div className="absolute -bottom-24 left-1/2 z-20 w-full -translate-x-1/2 md:-bottom-32">
       <MovingCarousel speed="very-slow">
         {photos.map((photo, index) => (
           <FooterCarouselCard key={index} photo={photo} />

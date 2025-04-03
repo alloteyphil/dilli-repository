@@ -13,7 +13,7 @@ const MerchandiseCard = ({ product }: { product: Product }) => {
   const { addItem } = useCart();
 
   return (
-    <div className="flex max-w-[361.92px] flex-col gap-4">
+    <div className="flex max-w-[361.92px] flex-col gap-4 max-md:max-w-full">
       <div className="group relative h-[489px] w-[361.92px] overflow-hidden">
         <Image
           src={product.image}
@@ -48,7 +48,7 @@ const MerchandiseCard = ({ product }: { product: Product }) => {
       <div className="flex w-full flex-col gap-2">
         <div className="flex justify-between">
           <p className="text-primary text-2xl">{product.name}</p>
-          <p className="text-accent text-2xl">$ {product.price}</p>
+          <p className="text-accent pr-1 text-2xl md:pr-0">$ {product.price}</p>
         </div>
         {product.variants.length > 1 && (
           <div className="flex gap-2">

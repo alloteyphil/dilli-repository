@@ -11,31 +11,39 @@ const AboutImages = () => {
     <div className="flex gap-4">
       <Image
         src={aboutImage1}
-        className="h-[450px] rounded-full object-cover object-bottom"
+        className="hidden h-[450px] rounded-full object-cover object-bottom xl:block"
         alt="about-image-1"
       />
 
-      <Image src={aboutImage2} className="object-cover" alt="about-image-2" />
+      <Image
+        src={aboutImage2}
+        className="object-cover max-lg:w-full max-md:h-[300px]"
+        alt="about-image-2"
+      />
 
-      <div className="relative max-h-max max-w-max">
+      <div className="relative max-h-max max-w-max max-lg:hidden">
         <Image
           src={aboutImage3}
-          className="h-[450px] rounded-full object-cover object-[25%_50%]"
+          className="h-[450px] rounded-full object-cover object-[25%_50%] max-md:h-[200px] max-md:w-[150px]"
           alt="about-image-3"
         />
         <Image
           src={spark}
-          className="absolute inset-1/2 z-100 size-28 -translate-x-1/2 -translate-y-1/2"
+          className="absolute inset-1/2 z-100 size-28 -translate-x-1/2 -translate-y-1/2 max-md:size-10"
           alt="spark"
         />
-        <div className="border-secondary absolute inset-[25px] rounded-full border" />
+        <div className="border-secondary absolute inset-[25px] rounded-full border max-md:inset-[10px]" />
       </div>
 
-      <Image src={aboutImage4} alt="about-image-4" />
+      <Image
+        src={aboutImage4}
+        className="max-lg:w-full max-md:h-[300px]"
+        alt="about-image-4"
+      />
 
       <Image
         src={aboutImage5}
-        className="h-[450px] rounded-full object-cover object-center"
+        className="hidden h-[450px] rounded-full object-cover object-center xl:block"
         alt="about-image-5"
       />
     </div>

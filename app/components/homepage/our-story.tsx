@@ -6,25 +6,25 @@ import Button from "../shared/button";
 
 const OurStory = () => {
   return (
-    <div className="bg-secondary-dark min-h-[100vh] py-[72px]">
-      <div className="boxed flex w-full gap-10">
-        <div className="relative w-[45%]">
+    <div className="bg-secondary-dark py-[72px]">
+      <div className="boxed flex w-full flex-col gap-10 md:flex-row">
+        <div className="relative w-full max-md:min-h-[300px] lg:w-[45%]">
           <div className="relative max-w-max">
-            <h1 className="text-primary text-[148px] leading-[0.75]">
+            <h1 className="text-primary text-7xl leading-[0.75] max-lg:text-nowrap md:text-8xl xl:text-[148px]">
               Our Story
             </h1>
-            <p className="text-accent font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-6deg] text-8xl">
+            <p className="text-accent font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-6deg] text-5xl md:text-6xl xl:text-8xl">
               who we are
             </p>
           </div>
           <Image
             src={ourStory}
             alt="our story"
-            className="absolute top-6 -left-10 scale-75"
+            className="absolute top-0 left-0 scale-75 md:top-5 md:left-8 md:scale-80 xl:top-6 xl:-left-10 xl:scale-75"
           />
         </div>
-        <div className="flex w-[55%] flex-col gap-10">
-          <p className="text-primary pl-14">
+        <div className="flex w-full flex-col gap-4 lg:w-[55%] xl:gap-10">
+          <p className="text-primary xl:pl-14">
             <span className="italic">
               once upon a time, in the bustling heart of New York City, there
               stood a restaurant unlike any other
@@ -34,7 +34,7 @@ const OurStory = () => {
             dining destination; it was an experience— a portal that transported
             you from the streets of Manhattan to the soul of India’s capital.
           </p>
-          <div className="relative max-h-max max-w-max">
+          <div className="relative hidden max-h-max max-w-max lg:block">
             <Image
               src={ourStory2}
               className="h-[400px] rounded-full object-cover object-center"
@@ -47,7 +47,7 @@ const OurStory = () => {
             />
             <div className="border-secondary absolute inset-[25px] rounded-full border" />
           </div>
-          <div className="text-primary flex flex-col gap-4 pl-14">
+          <div className="text-primary flex flex-col gap-4 xl:pl-14">
             <p>
               It all began with a vision—a desire to share the forgotten flavors
               of Delhi's rich culinary heritage with the world. The founders, a
@@ -67,7 +67,11 @@ const OurStory = () => {
               and one unforgettable experience at a time.
             </p>
           </div>
-          <Button href="/menu" variant="default" className="ml-14">
+          <Button
+            href="/menu"
+            variant="default"
+            className="max-xl:mt-6 xl:ml-14"
+          >
             view our inspired menu
           </Button>
         </div>

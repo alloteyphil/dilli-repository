@@ -9,7 +9,7 @@ interface TestimonialsCardProps {
 
 const TestimonialsCard = ({ text, author, icon }: TestimonialsCardProps) => {
   return (
-    <div className="bg-secondary relative h-[260px] w-[390px] p-6">
+    <div className="bg-secondary relative h-[260px] w-[390px] scale-90 p-6 md:scale-100">
       <div className="border-primary flex size-full flex-col justify-between rounded-md border p-6">
         <p className="text-primary">{text}</p>
         <div className="flex items-end justify-between">

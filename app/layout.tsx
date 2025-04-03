@@ -4,6 +4,8 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import { Toaster } from "sonner";
 import { CartProvider } from "@/context/CartContext";
+import MobileNavbar from "./components/mobile/navbar/mobile-navbar";
+import MobileMenuDrawer from "./components/mobile/navbar/mobile-menu-drawer";
 
 export const metadata: Metadata = {
   title: "Dilli Dilli",
@@ -20,6 +22,8 @@ export default function RootLayout({
       <body className="mx-auto max-w-[2500px] overflow-x-hidden">
         <CartProvider>
           <Navbar />
+          <MobileNavbar />
+          <MobileMenuDrawer />
           {children}
           <Toaster />
           <Footer />

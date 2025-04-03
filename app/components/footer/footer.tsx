@@ -10,17 +10,17 @@ import copyright from "@/public/images/copyright.svg";
 const Footer = () => {
   return (
     <div className="flex flex-col">
-      <div className="bg-secondary relative pt-[72px] pb-48">
-        <div className="boxed flex w-full items-end justify-between">
-          <div className="relative">
-            <h1 className="text-primary-light text-[148px] leading-[0.8]">
+      <div className="bg-secondary relative pt-[72px] pb-32 md:pb-48">
+        <div className="boxed flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">
+          <div className="relative max-w-max">
+            <h1 className="text-primary-light text-7xl leading-[0.8] md:text-8xl xl:text-[148px]">
               socials
             </h1>
-            <p className="text-accent font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-5deg] text-8xl">
+            <p className="text-accent font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 rotate-[-5deg] text-5xl md:text-6xl xl:text-8xl">
               follow us on
             </p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-2 md:gap-4">
             <Link
               target="_blank"
               href="https://www.instagram.com/dillidillinyc?igsh=dXU3Y3BmY3Rsamsz"
@@ -51,12 +51,12 @@ const Footer = () => {
         </div>
         <FooterCarousel />
       </div>
-      <div className="bg-accent flex w-full flex-col gap-14 pt-60 pb-10">
+      <div className="bg-accent flex w-full flex-col gap-14 pt-40 pb-10 md:pt-60">
         <div className="boxed w-full">
-          <div className="grid w-full grid-cols-3">
-            <div className="border-secondary my-auto flex max-h-max flex-col items-center justify-center gap-4 border-r py-2">
+          <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="border-secondary my-auto flex max-h-max flex-col items-start justify-center gap-4 py-2 md:items-center md:border-r">
               <p className="text-primary-light text-2xl">contact</p>
-              <div className="text-secondary flex flex-col items-center">
+              <div className="text-secondary flex flex-col items-start md:items-center">
                 <p>250 WEST 47TH STREET </p>
                 <p>NEW YORK, NY 10036</p>
                 <Link href="tel:+16466698261" className="underline">
@@ -64,9 +64,9 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center gap-4 py-2">
+            <div className="flex flex-col items-start justify-center gap-4 py-2 md:items-center">
               <p className="text-primary-light text-2xl">hours</p>
-              <div className="text-secondary flex flex-col items-center">
+              <div className="text-secondary flex flex-col items-start md:items-center">
                 <p>Mon - sun</p>
                 <p>5:00 PM - 10:30 PM</p>
                 <p>sat - sun</p>
@@ -74,9 +74,9 @@ const Footer = () => {
                 <p>Dinner 5:00 PM - 10:30 PM</p>
               </div>
             </div>
-            <div className="border-secondary my-auto flex max-h-max flex-col items-center justify-center gap-4 border-l py-2">
+            <div className="border-secondary my-auto flex max-h-max flex-col items-start justify-center gap-4 py-2 md:items-center md:border-l">
               <p className="text-primary-light text-2xl">Socials</p>
-              <div className="text-secondary flex flex-col items-center">
+              <div className="text-secondary flex flex-col items-start md:items-center">
                 <Link
                   target="_blank"
                   href="https://www.instagram.com/dillidillinyc?igsh=dXU3Y3BmY3Rsamsz"
@@ -97,8 +97,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <Image src={logo} alt="logo" className="w-[1600px]" />
-          <Image src={copyright} alt="copyright" />
+          <Image
+            src={logo}
+            alt="logo"
+            className="w-[1600px] scale-90 xl:scale-100"
+          />
+          <Image
+            src={copyright}
+            alt="copyright"
+            className="scale-75 xl:scale-100"
+          />
           {/* <p className="text-secondary font-script text-3xl">
             {`© ${new Date().getFullYear()} all rights reserved by dilli-dilli.com`}
           </p> */}
