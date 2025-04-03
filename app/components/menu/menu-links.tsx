@@ -11,7 +11,7 @@ const MenuLinks = () => {
   const slug = pathname.split("/")[2];
 
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-wrap gap-4">
       {menuLinks.map((link) => (
         <Link
           prefetch={true}

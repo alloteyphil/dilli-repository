@@ -76,8 +76,18 @@ const MobileMenuDrawer = () => {
         </div>
         <div className="flex flex-col items-center justify-center gap-2 md:items-start">
           <div className="flex gap-2">
-            <Image src={instagramIcon} alt="Instagram" />
-            <Image src={tikTokIcon} alt="TikTok" />
+            <Link
+              href="https://www.instagram.com/dillidillinyc?igsh=dXU3Y3BmY3Rsamsz"
+              target="_blank"
+            >
+              <Image src={instagramIcon} alt="Instagram" />
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@dilli.dilli.nyc?_t=ZT-8uy1w96X7WM&_r=1"
+              target="_blank"
+            >
+              <Image src={tikTokIcon} alt="TikTok" />
+            </Link>
           </div>
           <p className="text-center md:text-2xl">Follow us</p>
         </div>

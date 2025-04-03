@@ -16,12 +16,12 @@ const page = async ({ params }: { params: Params }) => {
   return (
     <div className="pt-[72px]">
       <div className="boxed flex flex-col gap-14">
-        <div className="flex items-end justify-between">
-          <div className="relative flex max-w-max flex-col gap-10">
-            <h1 className="text-accent text-[148px] leading-[0.8]">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
+          <div className="relative flex max-w-max min-w-max flex-col gap-10">
+            <h1 className="text-accent text-7xl leading-[0.8] md:text-8xl xl:text-[148px]">
               {menu.title}
             </h1>
-            <p className="text-primary-light font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 text-8xl">
+            <p className="text-primary-light font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 text-5xl md:text-6xl xl:text-8xl">
               our specialities
             </p>
           </div>
@@ -31,7 +31,7 @@ const page = async ({ params }: { params: Params }) => {
           </p>
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-x-28">
+        <div className="grid w-full grid-cols-1 gap-x-28 md:grid-cols-2">
           <div className="flex flex-col gap-6">
             {menu.dishes
               .slice(0, Math.ceil(menu.dishes.length / 2))
@@ -41,7 +41,9 @@ const page = async ({ params }: { params: Params }) => {
                     <p className="text-4xl">{dish.name}</p>
                     <p className="text-4xl">${dish.price}</p>
                   </div>
-                  <p className="text-accent">{dish.ingredients.join(" | ")}</p>
+                  <p className="text-accent max-w-xs text-wrap">
+                    {dish.ingredients.join(" | ")}
+                  </p>
                 </div>
               ))}
           </div>
@@ -54,7 +56,9 @@ const page = async ({ params }: { params: Params }) => {
                     <p className="text-4xl">{dish.name}</p>
                     <p className="text-4xl">${dish.price}</p>
                   </div>
-                  <p className="text-accent">{dish.ingredients.join(" | ")}</p>
+                  <p className="text-accent max-w-xs text-wrap">
+                    {dish.ingredients.join(" | ")}
+                  </p>
                 </div>
               ))}
           </div>
