@@ -44,6 +44,7 @@ const MobileMenuDrawer = () => {
           </Link>
           <Link
             prefetch={true}
+            scroll={false}
             href="/menu"
             className="text-accent"
             onClick={() => setIsOpen(false)}
