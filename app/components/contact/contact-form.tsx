@@ -185,7 +185,7 @@ const ContactForm = () => {
           <Image
             src={mobileContactBorder}
             alt="menu-border"
-            className="block h-[800px] w-full md:hidden"
+            className="block h-auto w-[90vw] md:hidden"
           />
         </div>
       </div>
