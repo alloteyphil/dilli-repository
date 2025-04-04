@@ -28,12 +28,19 @@ const ContactForm = () => {
       console.log("Form submitted with data:", data);
       toast.success("Success", {
         description: "Your message has been sent successfully!",
+        classNames: {
+          toast: "bg-accent! border-accent! text-secondary!",
+          description: "text-secondary!",
+        },
       });
     } catch (error) {
       console.error("Submission error:", error);
       toast.error("Error", {
         description: "Something went wrong. Please try again.",
-        className: "bg-red-500 text-secondary",
+        classNames: {
+          toast: "!bg-red-400 !border-red-400 !text-secondary",
+          description: "!text-secondary",
+        },
       });
     }
   };
@@ -43,7 +50,7 @@ const ContactForm = () => {
     toast.error("Validation Error", {
       description: firstError || "Please check the form for errors.",
       classNames: {
-        toast: "!bg-red-400 !text-secondary",
+        toast: "!bg-red-400 !border-red-400 !text-secondary",
         description: "!text-secondary",
       },
     });
@@ -65,7 +72,7 @@ const ContactForm = () => {
           ))}
         </div>
         <div className="relative z-10 h-auto w-max md:w-[700px] xl:h-[700px] xl:w-[900px]">
-          <div className="border-primary bg-secondary-dark absolute inset-[30px] z-10 rounded-sm border p-10 lg:inset-[40px]">
+          <div className="border-primary bg-secondary-dark absolute inset-[30px] z-10 rounded-sm border p-6 md:p-10 lg:inset-[40px]">
             <form
               className="flex h-full flex-col justify-between gap-4"
               onSubmit={handleSubmit(onSubmit, onError)}
