@@ -51,7 +51,7 @@ const CheckoutForm = () => {
   };
 
   return (
-    <div className="relative z-10 h-[872px] w-[694px]">
+    <section className="relative z-10 h-[872px] w-[694px]">
       <div className="border-primary bg-secondary-dark absolute inset-[40px] z-10 rounded-sm border p-10">
         <form
           className="flex h-full flex-col justify-between"
@@ -208,7 +208,7 @@ const CheckoutForm = () => {
         </form>
       </div>
       <Image src={outerBorder} alt="outer border" />
-    </div>
+    </section>
   );
 };
 

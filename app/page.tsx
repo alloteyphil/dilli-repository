@@ -8,7 +8,7 @@ import Merchandise from "./components/homepage/merchandise";
 
 const page = () => {
   return (
-    <div className="flex flex-col">
+    <main className="flex flex-col">
       <Hero />
       <About />
       <OurStory />
@@ -16,7 +16,7 @@ const page = () => {
       <Testimonials />
       <News />
       {process.env.NODE_ENV !== "production" && <Merchandise />}
-    </div>
+    </main>
   );
 };
 

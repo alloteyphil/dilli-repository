@@ -15,7 +15,7 @@ const MobileNavbar = () => {
   const { isOpen, setIsOpen } = useMobileNavbarToggle();
 
   return (
-    <div
+    <nav
       className={`flex w-full items-center justify-between p-4 md:p-8 xl:hidden ${pathname.includes("/menu") ? "bg-secondary-dark" : pathname === "/" ? "absolute top-0 left-0 z-50 w-full bg-transparent" : "bg-secondary"}`}
     >
       <MenuIcon
@@ -32,7 +32,7 @@ const MobileNavbar = () => {
       <Link href="tel:+1234567890">
         <Image src={phone} alt="phone" className="relative z-50 size-10" />
       </Link>
-    </div>
+    </nav>
   );
 };
 

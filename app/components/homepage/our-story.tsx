@@ -6,7 +6,7 @@ import Button from "../shared/button";
 
 const OurStory = () => {
   return (
-    <div className="bg-secondary-dark py-[72px]">
+    <section className="bg-secondary-dark py-[72px]">
       <div className="boxed flex w-full flex-col gap-10 md:flex-row">
         <div className="relative w-full max-md:min-h-[300px] lg:w-[45%]">
           <div className="relative max-w-max">
@@ -76,7 +76,7 @@ const OurStory = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

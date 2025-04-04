@@ -16,7 +16,7 @@ const SuccessPage = () => {
   }, []);
 
   return (
-    <div className="bg-secondary">
+    <main className="bg-secondary">
       <div className="boxed flex min-h-screen flex-col items-center gap-10 pt-60">
         <div className="flex flex-col items-center gap-5 text-center">
           <h1 className="text-primary text-[148px] leading-none">Thank You</h1>
@@ -28,7 +28,7 @@ const SuccessPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

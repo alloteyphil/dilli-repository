@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const News = () => {
   return (
-    <div className="bg-secondary-dark overflow-x-hidden py-[72px]">
+    <section className="bg-secondary-dark overflow-x-hidden py-[72px]">
       <div className="boxed flex flex-col items-center gap-10">
         <div className="relative max-w-max">
           <h1 className="text-accent text-center text-7xl leading-none md:text-8xl xl:text-[148px]">
@@ -50,7 +50,7 @@ const News = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

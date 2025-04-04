@@ -2,7 +2,7 @@ import DiningImages from "./dining-images";
 
 const Dining = () => {
   return (
-    <div className="bg-secondary py-[72px]">
+    <section className="bg-secondary py-[72px]">
       <div className="boxed flex flex-col items-center gap-10">
         <div className="relative max-w-max">
           <h1 className="text-primary text-7xl leading-none md:text-8xl xl:text-[148px]">
@@ -14,7 +14,7 @@ const Dining = () => {
         </div>
         <DiningImages />
       </div>
-    </div>
+    </section>
   );
 };
 

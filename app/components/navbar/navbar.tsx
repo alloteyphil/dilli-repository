@@ -13,7 +13,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div
+    <nav
       className={`max-xl:hidden ${pathname.includes("/menu") ? "bg-secondary-dark" : pathname === "/" ? "absolute top-0 left-0 z-50 w-full bg-transparent" : "bg-secondary"}`}
     >
       <div className="boxed text-accent flex items-center justify-between py-8">
@@ -52,7 +52,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import AboutImages from "./about-images";
 const About = () => {
   return (
-    <div className="bg-accent py-[72px]">
+    <section className="bg-accent py-[72px]">
       <div className="flex flex-col gap-10">
         <div className="boxed flex w-full flex-col gap-2 xl:flex-row xl:justify-between xl:gap-0">
           <div className="relative max-w-max">
@@ -27,7 +27,7 @@ const About = () => {
         </div>
         <AboutImages />
       </div>
-    </div>
+    </section>
   );
 };
 

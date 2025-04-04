@@ -14,7 +14,7 @@ const page = async ({ params }: { params: Params }) => {
   }
 
   return (
-    <div className="pt-[72px]">
+    <section className="pt-[72px]">
       <div className="boxed flex flex-col gap-14">
         <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
           <div className="relative flex max-w-max min-w-max flex-col gap-10">
@@ -64,7 +64,7 @@ const page = async ({ params }: { params: Params }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

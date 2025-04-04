@@ -5,7 +5,7 @@ const Merchandise = async () => {
   const data = await getProducts();
 
   return (
-    <div className="bg-secondary py-[72px]">
+    <section className="bg-secondary py-[72px]">
       <div className="boxed flex flex-col items-center gap-10">
         <div className="relative max-w-max text-center">
           <h1 className="text-primary text-7xl leading-none md:text-8xl xl:text-[148px]">
@@ -19,7 +19,7 @@ const Merchandise = async () => {
           <MerchandiseCarousel products={data.products} />
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

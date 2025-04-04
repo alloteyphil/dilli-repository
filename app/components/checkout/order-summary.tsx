@@ -27,7 +27,7 @@ const OrderSummary = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col justify-between">
+    <section className="flex flex-col justify-between">
       <div className="flex flex-col gap-6">
         <h1 className="text-accent text-6xl">Order Summary</h1>
         <div className="flex flex-col gap-3">
@@ -71,7 +71,7 @@ const OrderSummary = () => {
           </>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import event3 from "@/public/images/event3.png";
 
 const EventDining = () => {
   return (
-    <div
+    <section
       id="event-dining"
       className="bg-secondary-dark py-[300px] max-md:overflow-x-hidden"
     >
@@ -42,7 +42,7 @@ const EventDining = () => {
           className="border-secondary-border absolute -right-40 -bottom-10 h-[350px] w-[341px] scale-50 -rotate-[10.11deg] border-[14px] object-cover md:right-40 md:-bottom-40 xl:-bottom-80 xl:scale-100"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

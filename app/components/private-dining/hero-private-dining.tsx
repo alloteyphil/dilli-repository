@@ -5,7 +5,7 @@ import logo from "@/public/images/footerlogo.svg";
 
 const HeroPrivateDining = () => {
   return (
-    <div className="bg-secondary overflow-x-hidden pt-6 md:py-1">
+    <section className="bg-secondary overflow-x-hidden pt-6 md:py-1">
       <div className="bg-accent relative grid w-screen max-w-screen place-items-center px-4 py-8 max-md:h-[80vh] md:max-w-[4000px] md:px-8 md:py-20 xl:px-0">
         <div className="absolute -top-3 left-1/2 z-10 flex -translate-x-1/2 gap-[3px] overflow-x-hidden">
           {Array.from({ length: 400 }).map((_, index) => (
@@ -37,7 +37,7 @@ const HeroPrivateDining = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ import copyright from "@/public/images/copyright.svg";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col">
+    <footer className="flex flex-col">
       <div className="bg-secondary relative pt-[72px] pb-32 md:pb-48">
         <div className="boxed flex w-full flex-col gap-4 md:flex-row md:items-end md:justify-between md:gap-0">
           <div className="relative max-w-max">
@@ -112,7 +112,7 @@ const Footer = () => {
           </p> */}
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

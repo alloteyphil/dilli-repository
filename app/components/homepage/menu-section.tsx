@@ -6,7 +6,7 @@ import menu3 from "@/public/images/about-1-resized.png";
 
 const MenuSection = () => {
   return (
-    <div className="bg-secondary overflow-x-hidden py-[72px]">
+    <section className="bg-secondary overflow-x-hidden py-[72px]">
       <div className="boxed relative">
         <div className="relative flex flex-col items-center gap-10">
           <h1 className="text-accent text-7xl leading-none text-nowrap md:text-8xl xl:text-[148px]">
@@ -75,7 +75,7 @@ const MenuSection = () => {
           className="border-secondary-border absolute -right-78 -bottom-25 h-[350.4px] w-[341.36px] -translate-x-1/2 -translate-y-1/2 scale-50 rotate-[349.89deg] border-[14px] object-cover object-bottom md:-right-62 md:-bottom-25 md:scale-70 xl:right-5 xl:bottom-6 xl:scale-100"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

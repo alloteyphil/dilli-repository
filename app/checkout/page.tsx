@@ -3,7 +3,7 @@ import CheckoutForm from "../components/checkout/checkout";
 
 const page = () => {
   return (
-    <div className="bg-secondary">
+    <main className="bg-secondary">
       <div className="boxed relative flex flex-col items-center gap-10">
         <div className="relative max-w-max">
           <h1 className="text-primary text-[148px] leading-none">checkout</h1>
@@ -16,7 +16,7 @@ const page = () => {
           <OrderSummary />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -4,7 +4,7 @@ import PrivateDiningCard from "./private-dining-card";
 import { privateDiningCardContent } from "@/data/dining";
 const PrivateDiningSection = () => {
   return (
-    <div className="bg-primary py-[72px]">
+    <section className="bg-primary py-[72px]">
       <div className="boxed flex flex-col items-center gap-15 max-md:min-w-full">
         <div className="relative max-w-max">
           <h1 className="text-primary-light text-center text-7xl leading-none md:text-8xl xl:text-[148px]">
@@ -29,7 +29,7 @@ const PrivateDiningSection = () => {
           </Button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

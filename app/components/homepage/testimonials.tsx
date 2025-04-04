@@ -3,7 +3,7 @@ import TestimonialsCarousel from "./testimonials-carousel";
 
 const Testimonials = () => {
   return (
-    <div className="bg-primary flex flex-col gap-4 py-[72px] md:gap-10">
+    <section className="bg-primary flex flex-col gap-4 py-[72px] md:gap-10">
       <div className="boxed">
         <div className="relative max-w-max">
           <h1 className="text-primary-light text-center text-7xl leading-none md:text-8xl xl:text-[148px]">
@@ -20,7 +20,7 @@ const Testimonials = () => {
           Reserve A TABLE
         </Button>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -57,7 +57,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-secondary overflow-x-hidden py-[72px]">
+    <section className="bg-secondary overflow-x-hidden py-[72px]">
       <div className="relative mx-auto grid h-max place-items-center">
         <div className="absolute top-1/2 left-1/2 flex min-w-[2000px] -translate-x-1/2 -translate-y-1/2">
           {Array.from({ length: 3 }).map((_, index) => (
@@ -204,7 +204,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
