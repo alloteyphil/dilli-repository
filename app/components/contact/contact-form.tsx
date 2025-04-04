@@ -2,14 +2,17 @@
 
 import contactBorder from "@/public/images/contact-border.svg";
 import Image from "next/image";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, FieldErrors } from "react-hook-form";
 import { cn } from "@/lib/utils";
+import mobileContactBorder from "@/public/images/mobile-contact-form.svg";
+import { toast } from "sonner";
 
 interface FormInput {
   firstName: string;
   lastName: string;
   phoneNumber: string;
   email: string;
+  subject: string;
   message: string;
 }
 
@@ -22,15 +25,32 @@ const ContactForm = () => {
 
   const onSubmit: SubmitHandler<FormInput> = async (data) => {
     try {
-      console.log(data);
-      // Add your form submission logic here
+      console.log("Form submitted with data:", data);
+      toast.success("Success", {
+        description: "Your message has been sent successfully!",
+      });
     } catch (error) {
-      console.error(error);
+      console.error("Submission error:", error);
+      toast.error("Error", {
+        description: "Something went wrong. Please try again.",
+        className: "bg-red-500 text-secondary",
+      });
     }
   };
 
+  const onError = (errors: FieldErrors<FormInput>) => {
+    const firstError = Object.values(errors)[0]?.message;
+    toast.error("Validation Error", {
+      description: firstError || "Please check the form for errors.",
+      classNames: {
+        toast: "!bg-red-500 !text-secondary",
+        description: "!text-secondary",
+      },
+    });
+  };
+
   return (
-    <div className="bg-secondary py-[72px]">
+    <div className="bg-secondary overflow-x-hidden py-[72px]">
       <div className="relative mx-auto grid h-max place-items-center">
         <div className="absolute top-1/2 left-1/2 flex min-w-[2000px] -translate-x-1/2 -translate-y-1/2">
           {Array.from({ length: 3 }).map((_, index) => (
@@ -44,115 +64,108 @@ const ContactForm = () => {
             </div>
           ))}
         </div>
-        <div className="relative z-10 h-[700px] w-[900px]">
-          <div className="border-primary bg-secondary-dark absolute inset-[40px] z-10 rounded-sm border p-10">
+        <div className="relative z-10 h-auto w-max md:w-[700px] xl:h-[700px] xl:w-[900px]">
+          <div className="border-primary bg-secondary-dark absolute inset-[30px] z-10 rounded-sm border p-10 lg:inset-[40px]">
             <form
-              className="flex h-full flex-col justify-between"
-              onSubmit={handleSubmit(onSubmit)}
+              className="flex h-full flex-col justify-between gap-4"
+              onSubmit={handleSubmit(onSubmit, onError)}
             >
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1">
-                  <input
-                    {...register("firstName", {
-                      required: "First name is required",
-                      minLength: {
-                        value: 2,
-                        message: "First name must be at least 2 characters",
-                      },
-                    })}
-                    placeholder="First Name*"
-                    className={cn(
-                      "input",
-                      errors.firstName && "border-red-500",
-                    )}
-                  />
-                  {errors.firstName && (
-                    <p className="text-xs text-red-500">
-                      {errors.firstName.message}
-                    </p>
-                  )}
-                </div>
-                <div className="flex flex-col gap-1">
-                  <input
-                    {...register("lastName")}
-                    placeholder="Last Name"
-                    className={cn("input", errors.lastName && "border-red-500")}
-                  />
-                  {errors.lastName && (
-                    <p className="text-xs text-red-500">
-                      {errors.lastName.message}
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1">
-                  <input
-                    {...register("phoneNumber", {
-                      required: "Phone number is required",
-                      pattern: {
-                        value: /^(\+?1-?)?\(?[0-9]{3}\)?[0-9]{3}-?[0-9]{4}$/,
-                        message: "Please enter a valid phone number",
-                      },
-                    })}
-                    placeholder="Phone Number*"
-                    className={cn(
-                      "input",
-                      errors.phoneNumber && "border-red-500",
-                    )}
-                  />
-                  {errors.phoneNumber && (
-                    <p className="text-xs text-red-500">
-                      {errors.phoneNumber.message}
-                    </p>
-                  )}
-                </div>
-                <div className="flex flex-col gap-1">
-                  <input
-                    {...register("email", {
-                      required: "Email is required",
-                      pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "Please enter a valid email address",
-                      },
-                    })}
-                    placeholder="Email*"
-                    className={cn("input", errors.email && "border-red-500")}
-                  />
-                  {errors.email && (
-                    <p className="text-xs text-red-500">
-                      {errors.email.message}
-                    </p>
-                  )}
-                </div>
-              </div>
-              <input
-                {...register("message")}
-                placeholder="Subject"
-                className="input"
-              />
-              <div className="flex flex-col gap-1">
-                <textarea
-                  {...register("message", {
-                    required: "Message is required",
+              {/*Name*/}
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {/*First Name*/}
+                <input
+                  {...register("firstName", {
+                    required: "First name is required",
                     minLength: {
-                      value: 5,
-                      message: "Message must be at least 5 characters",
+                      value: 2,
+                      message: "First name must be at least 2 characters",
                     },
                   })}
-                  placeholder="Message*"
+                  placeholder="First Name*"
                   className={cn(
-                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full border px-5 py-3 text-xl font-semibold uppercase",
-                    "h-[200px] resize-none rounded-2xl",
-                    errors.message && "border-red-500",
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.firstName && "border-red-500",
                   )}
                 />
-                {errors.message && (
-                  <p className="text-xs text-red-500">
-                    {errors.message.message}
-                  </p>
-                )}
+
+                {/*Last Name*/}
+                <input
+                  {...register("lastName", {
+                    required: "Last name is required",
+                    minLength: {
+                      value: 2,
+                      message: "Last name must be at least 2 characters",
+                    },
+                  })}
+                  placeholder="Last Name"
+                  className={cn(
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.lastName && "border-red-500",
+                  )}
+                />
               </div>
+
+              {/*Phone Number & Email*/}
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {/*Phone Number*/}
+                <input
+                  {...register("phoneNumber", {
+                    required: "Phone number is required",
+                    pattern: {
+                      value: /^(\+?1-?)?\(?[0-9]{3}\)?[0-9]{3}-?[0-9]{4}$/,
+                      message: "Please enter a valid phone number",
+                    },
+                  })}
+                  placeholder="Phone Number*"
+                  className={cn(
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.phoneNumber && "border-red-500",
+                  )}
+                />
+
+                {/*Email*/}
+                <input
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Please enter a valid email address",
+                    },
+                  })}
+                  placeholder="Email*"
+                  className={cn(
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.email && "border-red-500",
+                  )}
+                />
+              </div>
+
+              {/*Subject*/}
+              <input
+                {...register("subject")}
+                placeholder="Subject"
+                className={cn(
+                  "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                  errors.subject && "border-red-500",
+                )}
+              />
+
+              {/*Message*/}
+              <textarea
+                {...register("message", {
+                  required: "Message is required",
+                  minLength: {
+                    value: 5,
+                    message: "Message must be at least 5 characters",
+                  },
+                })}
+                placeholder="Message*"
+                className={cn(
+                  "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent h-[200px] w-full resize-none rounded-2xl border px-5 py-3 text-xl font-semibold uppercase",
+                  errors.message && "border-red-500",
+                )}
+              />
+
               <input
                 type="submit"
                 value={isSubmitting ? "Sending..." : "Submit"}
@@ -167,11 +180,15 @@ const ContactForm = () => {
           <Image
             src={contactBorder}
             alt="menu-border"
-            className="h-full w-full"
+            className="hidden h-full w-full md:block"
+          />
+          <Image
+            src={mobileContactBorder}
+            alt="menu-border"
+            className="block h-[800px] w-full md:hidden"
           />
         </div>
       </div>
-      <div></div>
     </div>
   );
 };

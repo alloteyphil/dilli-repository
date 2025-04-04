@@ -21,11 +21,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="mx-auto max-w-[2500px] overflow-x-hidden">
         <CartProvider>
+          <Toaster  />
           <Navbar />
           <MobileNavbar />
           <MobileMenuDrawer />
           {children}
-          <Toaster />
           <Footer />
         </CartProvider>
       </body>
