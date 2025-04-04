@@ -39,7 +39,7 @@ const EventDining = () => {
         <Image
           src={event3}
           alt="event3"
-          className="border-secondary-border absolute top-30 h-[350px] w-[341px] -translate-x-1/2 -translate-y-1/2 scale-50 -rotate-[10.11deg] border-[14px] object-cover max-md:left-full md:top-50 md:left-full md:scale-75 lg:right-10 xl:top-[550px] xl:scale-100"
+          className="border-secondary-border absolute -right-40 -bottom-10 h-[350px] w-[341px] scale-50 -rotate-[10.11deg] border-[14px] object-cover md:right-40 md:-bottom-40 xl:-bottom-80 xl:scale-100"
         />
       </div>
     </div>
