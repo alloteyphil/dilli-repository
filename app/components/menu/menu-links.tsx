@@ -15,6 +15,7 @@ const MenuLinks = () => {
       {menuLinks.map((link) => (
         <Link
           prefetch={true}
+          scroll={false}
           key={link.name}
           href={`/menu${link.href}`}
           className="group relative"
