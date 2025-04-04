@@ -1,5 +1,4 @@
 import Ellipse from "../shared/ellipse";
-import Image from "next/image";
 
 interface TestimonialsCardProps {
   text: string;
@@ -14,7 +13,7 @@ const TestimonialsCard = ({ text, author, icon }: TestimonialsCardProps) => {
         <p className="text-primary">{text}</p>
         <div className="flex items-end justify-between">
           <p className="text-primary leading-none italic">{author}</p>
-          <Image src={icon} alt={author} />
+          <img src={icon} alt={author} width={64} height={64} />
         </div>
         <div className="absolute -top-3 -left-3 z-10 flex h-[22px] w-[412px] gap-1">
           {Array.from({ length: 16 }).map((_, index) => (
