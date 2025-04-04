@@ -20,9 +20,9 @@ const MobileNavbar = () => {
     >
       <MenuIcon
         onClick={() => setIsOpen(!isOpen)}
-        className={`size-10 ${pathname === "/" ? "text-secondary" : "text-accent"}`}
+        className={`relative z-50 size-10 ${pathname === "/" ? "text-secondary" : "text-accent"}`}
       />
-      <Link href="/">
+      <Link href="/" className="relative z-50">
         <Image
           src={pathname === "/" ? lightLogo : darkLogo}
           alt="logo"
@@ -30,7 +30,7 @@ const MobileNavbar = () => {
         />
       </Link>
       <Link href="tel:+1234567890">
-        <Image src={phone} alt="phone" className="size-10" />
+        <Image src={phone} alt="phone" className="relative z-50 size-10" />
       </Link>
     </div>
   );
