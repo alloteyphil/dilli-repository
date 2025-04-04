@@ -43,7 +43,7 @@ const ContactForm = () => {
     toast.error("Validation Error", {
       description: firstError || "Please check the form for errors.",
       classNames: {
-        toast: "!bg-red-500 !text-secondary",
+        toast: "!bg-red-400 !text-secondary",
         description: "!text-secondary",
       },
     });
@@ -84,7 +84,8 @@ const ContactForm = () => {
                   placeholder="First Name*"
                   className={cn(
                     "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
-                    errors.firstName && "border-red-500",
+                    errors.firstName &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
                   )}
                 />
 
@@ -100,7 +101,8 @@ const ContactForm = () => {
                   placeholder="Last Name"
                   className={cn(
                     "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
-                    errors.lastName && "border-red-500",
+                    errors.lastName &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
                   )}
                 />
               </div>
@@ -119,7 +121,8 @@ const ContactForm = () => {
                   placeholder="Phone Number*"
                   className={cn(
                     "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
-                    errors.phoneNumber && "border-red-500",
+                    errors.phoneNumber &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
                   )}
                 />
 
@@ -135,7 +138,8 @@ const ContactForm = () => {
                   placeholder="Email*"
                   className={cn(
                     "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
-                    errors.email && "border-red-500",
+                    errors.email &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
                   )}
                 />
               </div>
@@ -146,7 +150,8 @@ const ContactForm = () => {
                 placeholder="Subject"
                 className={cn(
                   "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
-                  errors.subject && "border-red-500",
+                  errors.subject &&
+                    "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
                 )}
               />
 
@@ -162,7 +167,8 @@ const ContactForm = () => {
                 placeholder="Message*"
                 className={cn(
                   "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent h-[200px] w-full resize-none rounded-2xl border px-5 py-3 text-xl font-semibold uppercase",
-                  errors.message && "border-red-500",
+                  errors.message &&
+                    "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
                 )}
               />
 
@@ -181,11 +187,13 @@ const ContactForm = () => {
             src={contactBorder}
             alt="menu-border"
             className="hidden h-full w-full md:block"
+            priority
           />
           <Image
             src={mobileContactBorder}
             alt="menu-border"
             className="block h-auto w-[90vw] md:hidden"
+            priority
           />
         </div>
       </div>
