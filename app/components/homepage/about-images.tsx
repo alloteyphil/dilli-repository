@@ -8,7 +8,7 @@ import spark from "@/public/images/spark.svg";
 
 const AboutImages = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 px-4 md:px-8 xl:px-0">
       <Image
         src={aboutImage1}
         className="hidden h-[450px] rounded-full object-cover object-bottom xl:block"

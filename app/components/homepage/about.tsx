@@ -1,5 +1,6 @@
 import React from "react";
 import AboutImages from "./about-images";
+
 const About = () => {
   return (
     <section className="bg-accent py-[72px]">
