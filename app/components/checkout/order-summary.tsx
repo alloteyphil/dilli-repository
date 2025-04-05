@@ -29,7 +29,7 @@ const OrderSummary = () => {
   return (
     <section className="flex flex-col justify-between">
       <div className="flex flex-col gap-6">
-        <h1 className="text-accent text-6xl">Order Summary</h1>
+        <h1 className="text-accent text-4xl md:text-6xl">Order Summary</h1>
         <div className="flex flex-col gap-3">
           <h2 className="text-accent text-3xl">apply discount code</h2>
           <div className="flex w-full gap-5">
