@@ -57,8 +57,20 @@ const Footer = () => {
             <div className="border-secondary my-auto flex max-h-max flex-col items-start justify-center gap-4 py-2 md:items-center md:border-r">
               <p className="text-primary-light text-2xl">contact</p>
               <div className="text-secondary flex flex-col items-start md:items-center">
-                <p>250 WEST 47TH STREET </p>
-                <p>NEW YORK, NY 10036</p>
+                <Link
+                  href="https://maps.app.goo.gl/bpu3qn4q62dAsJNv7"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  <p>250 WEST 47TH STREET </p>
+                </Link>
+                <Link
+                  href="https://maps.app.goo.gl/bpu3qn4q62dAsJNv7"
+                  target="_blank"
+                  className="hover:underline"
+                >
+                  <p>NEW YORK, NY 10036</p>
+                </Link>
                 <Link href="tel:+16466698261" className="underline">
                   <p> +1 (646) 669-8261</p>
                 </Link>

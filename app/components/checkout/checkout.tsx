@@ -33,6 +33,17 @@ const CheckoutForm = () => {
   } = useForm<FormInput>();
 
   const onSubmit: SubmitHandler<FormInput> = async (data) => {
+    if (!items || items.length === 0) {
+      toast.error("No items in cart", {
+        description: "Please add items to your cart before checking out.",
+        classNames: {
+          toast: "!bg-red-400 !border-red-400 !text-secondary",
+          description: "!text-secondary",
+        },
+      });
+      return;
+    }
+
     try {
       const stripeSessionUrl = await checkout(items, data.email, {
         first_name: data.firstName,

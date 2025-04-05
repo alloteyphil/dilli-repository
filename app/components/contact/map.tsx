@@ -25,7 +25,7 @@ const Map = () => {
 
   return (
     <Link
-      href="https://www.google.com/maps/place/Dilli+Dilli+%26+Dilli+Dilli+Reservations/@40.7598419,-73.989277,15z/data=!4m2!3m1!1s0x89c2585ff9df2f6d:0x539504e9e3471bbe"
+      href="https://maps.app.goo.gl/bpu3qn4q62dAsJNv7"
       target="_blank"
       className="absolute -right-[300px] -bottom-[280px] z-100 hidden xl:block"
     >
