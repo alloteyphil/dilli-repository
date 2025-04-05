@@ -8,6 +8,7 @@ import Button from "../shared/button";
 import { checkout } from "@/actions/checkout/checkout.actions";
 import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
+import mobileOuterBorder from "@/public/images/mobile-checkout-border.svg";
 
 interface FormInput {
   firstName: string;
@@ -51,14 +52,14 @@ const CheckoutForm = () => {
   };
 
   return (
-    <section className="relative z-10 h-[872px] w-[694px]">
-      <div className="border-primary bg-secondary-dark absolute inset-[40px] z-10 rounded-sm border p-10">
+    <section className="relative z-10 h-auto w-full md:h-[872px] md:w-[694px]">
+      <div className="border-primary bg-secondary-dark absolute inset-[30px] z-10 rounded-sm border p-6 py-8 md:inset-[40px] md:p-10 md:py-10">
         <form
           className="flex h-full flex-col justify-between"
           onSubmit={handleSubmit(onSubmit)}
         >
           {/* Contact */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2 md:gap-6">
             <h2 className="text-primary text-4xl">Contact</h2>
             <input
               {...register("email", {
@@ -83,11 +84,11 @@ const CheckoutForm = () => {
           </div>
 
           {/* Delivery */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2 md:gap-6">
             <h2 className="text-primary text-4xl">Delivery</h2>
 
             {/* Name */}
-            <div className="flex w-full gap-5">
+            <div className="flex w-full gap-5 max-md:flex-col max-md:gap-2">
               {/* First Name */}
               <div className="flex w-full flex-col gap-2">
                 <input
@@ -194,7 +195,7 @@ const CheckoutForm = () => {
           </div>
 
           {/* Payment */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2 md:gap-6">
             <h2 className="text-primary text-4xl">Payment</h2>
             <div className="w-full">
               <Button
@@ -207,7 +208,12 @@ const CheckoutForm = () => {
           </div>
         </form>
       </div>
-      <Image src={outerBorder} alt="outer border" />
+      <Image src={outerBorder} alt="outer border" className="hidden md:block" />
+      <Image
+        src={mobileOuterBorder}
+        alt="outer border"
+        className="block h-full w-[100vw] md:hidden"
+      />
     </section>
   );
 };
