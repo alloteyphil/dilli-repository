@@ -98,11 +98,10 @@ const CheckoutForm = () => {
             <div className="flex items-center gap-2">
               <input
                 type="checkbox"
-                className="checked:bg-accent checked:text-secondary border-primary checked:border-accent size-3 appearance-none rounded border bg-white"
+                id="marketing-consent"
+                className="border-primary checked:border-accent checked:bg-accent hover:border-accent focus:ring-accent bg-secondary size-4 cursor-pointer appearance-none rounded border checked:bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgNC41TDQuMzMzMzMgOEwxMSAxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==')] checked:bg-center checked:bg-no-repeat focus:ring-2 focus:ring-offset-1 focus:outline-none"
               />
-              <p className="text-primary">
-                email me with new launches and offers
-              </p>
+              <p className="text-primary">email me with new offers</p>
             </div>
           </div>
 
