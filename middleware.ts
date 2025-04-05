@@ -22,7 +22,7 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     "/menu",
-    "/checkout",
+    // "/checkout",
     "/merchandise",
     "/merchandise/:path*",
     "/order-confirmation",

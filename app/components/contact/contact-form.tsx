@@ -25,7 +25,6 @@ const ContactForm = () => {
 
   const onSubmit: SubmitHandler<FormInput> = async (data) => {
     try {
-      console.log("Form submitted with data:", data);
       toast.success("Success", {
         description: "Your message has been sent successfully!",
         classNames: {

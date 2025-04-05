@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import outerBorder from "@/public/images/checkout-border.svg";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, FieldErrors } from "react-hook-form";
 import { cn } from "@/lib/utils";
 import Button from "../shared/button";
 import { checkout } from "@/actions/checkout/checkout.actions";
 import { useCart } from "@/context/CartContext";
 import { useRouter } from "next/navigation";
 import mobileOuterBorder from "@/public/images/mobile-checkout-border.svg";
+import { toast } from "sonner";
 
 interface FormInput {
   firstName: string;
@@ -48,7 +49,25 @@ const CheckoutForm = () => {
       }
     } catch (error) {
       console.error(error);
+      toast.error("Error", {
+        description: "Something went wrong. Please try again.",
+        classNames: {
+          toast: "!bg-red-400 !border-red-400 !text-secondary",
+          description: "!text-secondary",
+        },
+      });
     }
+  };
+
+  const onError = (errors: FieldErrors<FormInput>) => {
+    const firstError = Object.values(errors)[0]?.message;
+    toast.error("Validation Error", {
+      description: firstError || "Please check the form for errors.",
+      classNames: {
+        toast: "!bg-red-400 !border-red-400 !text-secondary",
+        description: "!text-secondary",
+      },
+    });
   };
 
   return (
@@ -56,7 +75,7 @@ const CheckoutForm = () => {
       <div className="border-primary bg-secondary-dark absolute inset-[30px] z-10 rounded-sm border p-6 py-8 md:inset-[40px] md:p-10 md:py-10">
         <form
           className="flex h-full flex-col justify-between"
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit, onError)}
         >
           {/* Contact */}
           <div className="flex flex-col gap-2 md:gap-6">
@@ -66,17 +85,21 @@ const CheckoutForm = () => {
                 required: "Email is required",
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                  message: "Invalid email address",
+                  message: "Please enter a valid email address",
                 },
               })}
               placeholder="Email*"
-              className={cn("input", errors.email && "border-red-500")}
+              className={cn(
+                "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                errors.email &&
+                  "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
+              )}
             />
-            {errors.email && (
-              <p className="text-xs text-red-500">{errors.email.message}</p>
-            )}
             <div className="flex items-center gap-2">
-              <input type="checkbox" className="border-primary" />
+              <input
+                type="checkbox"
+                className="checked:bg-accent checked:text-secondary border-primary checked:border-accent size-3 appearance-none rounded border bg-white"
+              />
               <p className="text-primary">
                 email me with new launches and offers
               </p>
@@ -100,13 +123,12 @@ const CheckoutForm = () => {
                     },
                   })}
                   placeholder="First Name*"
-                  className={cn("input", errors.firstName && "border-red-500")}
+                  className={cn(
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.firstName &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
+                  )}
                 />
-                {errors.firstName && (
-                  <p className="text-xs text-red-500">
-                    {errors.firstName.message}
-                  </p>
-                )}
               </div>
 
               {/* Last Name */}
@@ -119,14 +141,13 @@ const CheckoutForm = () => {
                       message: "Last name must be at least 2 characters",
                     },
                   })}
-                  placeholder="Last Name*"
-                  className={cn("input", errors.lastName && "border-red-500")}
+                  placeholder="Last Name"
+                  className={cn(
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.lastName &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
+                  )}
                 />
-                {errors.lastName && (
-                  <p className="text-xs text-red-500">
-                    {errors.lastName.message}
-                  </p>
-                )}
               </div>
             </div>
 
@@ -137,11 +158,12 @@ const CheckoutForm = () => {
                   required: "Address is required",
                 })}
                 placeholder="Address*"
-                className={cn("input", errors.address && "border-red-500")}
+                className={cn(
+                  "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                  errors.address &&
+                    "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
+                )}
               />
-              {errors.address && (
-                <p className="text-xs text-red-500">{errors.address.message}</p>
-              )}
             </div>
 
             {/* Address 2 */}
@@ -151,13 +173,12 @@ const CheckoutForm = () => {
                   required: "Address is required",
                 })}
                 placeholder="APARTMENT, SUITE, ETC"
-                className={cn("input", errors.address2 && "border-red-500")}
+                className={cn(
+                  "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                  errors.address2 &&
+                    "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
+                )}
               />
-              {errors.address2 && (
-                <p className="text-xs text-red-500">
-                  {errors.address2.message}
-                </p>
-              )}
             </div>
 
             {/* City and Post Code */}
@@ -169,11 +190,12 @@ const CheckoutForm = () => {
                     required: "City is required",
                   })}
                   placeholder="City*"
-                  className={cn("input", errors.city && "border-red-500")}
+                  className={cn(
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.city &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
+                  )}
                 />
-                {errors.city && (
-                  <p className="text-xs text-red-500">{errors.city.message}</p>
-                )}
               </div>
 
               {/* Post Code */}
@@ -183,13 +205,12 @@ const CheckoutForm = () => {
                     required: "Post code is required",
                   })}
                   placeholder="PostCode*"
-                  className={cn("input", errors.postCode && "border-red-500")}
+                  className={cn(
+                    "bg-secondary font-primary text-primary placeholder:text-primary border-primary focus:outline-accent focus-visible:outline-accent w-full rounded-full border px-5 py-3 text-xl font-semibold uppercase",
+                    errors.postCode &&
+                      "border-red-400 focus:outline-red-400 focus-visible:outline-red-400",
+                  )}
                 />
-                {errors.postCode && (
-                  <p className="text-xs text-red-500">
-                    {errors.postCode.message}
-                  </p>
-                )}
               </div>
             </div>
           </div>
