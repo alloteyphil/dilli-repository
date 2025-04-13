@@ -29,7 +29,7 @@ const MobileNavbar = () => {
           className="w-40"
         />
       </Link>
-      <Link href="tel:+1234567890">
+      <Link href="tel:+19298227049">
         <Image src={phone} alt="phone" className="relative z-50 size-10" />
       </Link>
     </nav>

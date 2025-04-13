@@ -31,22 +31,6 @@ const Navbar = () => {
           {process.env.NODE_ENV !== "production" && (
             <CartIcon isHome={pathname === "/"} />
           )}
-          <Link
-            prefetch={true}
-            href="/private-dining#event-dining"
-            className="group relative"
-          >
-            <p
-              className={`${pathname === "/" ? "text-secondary" : "text-accent"} min-w-max`}
-            >
-              Event Catering
-            </p>
-            <span
-              className={`link-underline ${
-                pathname === "/" ? "bg-secondary" : "bg-accent"
-              } `}
-            />
-          </Link>
           <Link prefetch={true} href="/contact" className="group relative">
             <Button variant="default">Get in touch</Button>
           </Link>

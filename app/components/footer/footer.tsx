@@ -71,8 +71,8 @@ const Footer = () => {
                 >
                   <p>NEW YORK, NY 10036</p>
                 </Link>
-                <Link href="tel:+16466698261" className="underline">
-                  <p> +1 (646) 669-8261</p>
+                <Link href="tel:+19298227049" className="underline">
+                  <p> +1 (929) 822-7049</p>
                 </Link>
               </div>
             </div>

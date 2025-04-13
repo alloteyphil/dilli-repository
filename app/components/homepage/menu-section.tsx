@@ -20,12 +20,11 @@ const MenuSection = () => {
               our specialities
             </p>
           </div>
-          <p className="text-primary -mt-4 max-w-92 text-center max-md:mb-55">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
           <h1 className="text-accent text-7xl leading-none md:text-8xl xl:text-[148px]">
             large plates
+          </h1>
+          <h1 className="text-accent text-7xl leading-none md:text-8xl xl:text-[148px]">
+            brunch
           </h1>
           <h1 className="text-accent text-7xl leading-none md:text-8xl xl:text-[148px]">
             sides
@@ -40,9 +39,9 @@ const MenuSection = () => {
         <Button
           innerTextStyle="cursor-default"
           variant="outline-dark"
-          className="absolute top-80 left-25 z-10 max-md:py-2 md:top-40 md:left-25 xl:bottom-[600px] xl:left-[390px]"
+          className="absolute top-80 left-25 z-10 max-md:py-2 md:top-40 md:left-25 xl:top-[500px] xl:left-[390px]"
         >
-          GILAFI PANEER
+          dilli dilli tikki
         </Button>
         <Button
           innerTextStyle="cursor-default"
@@ -54,15 +53,15 @@ const MenuSection = () => {
         <Button
           innerTextStyle="cursor-default"
           variant="outline-dark"
-          className="absolute right-10 bottom-40 z-10 max-md:py-2 md:right-39 md:bottom-50 xl:right-30 xl:bottom-72"
+          className="absolute right-10 bottom-40 z-10 max-md:py-2 md:right-39 md:bottom-50 xl:right-20 xl:bottom-72"
         >
-          KOYLA CHICKEN
+          WENGERS SHAMI KEBAB
         </Button>
 
         <Image
           src={menu1}
           alt="menu"
-          className="border-secondary-border absolute -bottom-12 left-15 h-[556.87px] w-[374.77px] -translate-x-1/2 -translate-y-1/2 scale-50 rotate-[349.89deg] border-[14px] object-cover md:-bottom-4 md:left-20 md:scale-70 xl:bottom-4 xl:left-[280px] xl:scale-100"
+          className="border-secondary-border absolute -bottom-12 left-15 h-[556.87px] w-[374.77px] -translate-x-1/2 -translate-y-1/2 scale-50 rotate-[349.89deg] border-[14px] object-cover md:-bottom-4 md:left-20 md:scale-70 xl:bottom-4 xl:left-[250px] xl:scale-100"
         />
         <Image
           src={menu2}

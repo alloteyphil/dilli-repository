@@ -16,18 +16,12 @@ const page = async ({ params }: { params: Params }) => {
   return (
     <section className="pt-[72px]">
       <div className="boxed flex flex-col gap-14">
-        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-          <div className="relative flex max-w-max min-w-max flex-col gap-10">
-            <h1 className="text-accent text-7xl leading-[0.8] md:text-8xl xl:text-[148px]">
-              {menu.title}
-            </h1>
-            <p className="text-primary-light font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 text-5xl md:text-6xl xl:text-8xl">
-              our specialities
-            </p>
-          </div>
-          <p className="text-primary max-w-[400px] text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <div className="relative flex max-w-max min-w-max flex-col gap-10">
+          <h1 className="text-accent text-7xl leading-[0.8] md:text-8xl xl:text-[148px]">
+            {menu.title}
+          </h1>
+          <p className="text-primary-light font-script absolute top-1/2 left-1/2 min-w-max -translate-x-1/2 -translate-y-1/2 text-5xl md:text-6xl xl:text-8xl">
+            our specialities
           </p>
         </div>
 

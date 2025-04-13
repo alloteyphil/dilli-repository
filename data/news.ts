@@ -26,12 +26,10 @@ export const news = [
   {
     id: 3,
     image: news3,
-    publication: "Infatuation NYC",
-    link: "https://honestcooking.com/dilli-dilli-old-delhi-meets-new-delhi-in-the-heart-of-times-square/",
-    author: "Sharan Kuganesan",
-    title:
-      "Dilli Dilli: Old Delhi Meets New Delhi in the Heart of Times Square",
-    description:
-      "The menu is quite literally split into plates inspired by Old Delhi and New Delhi, and as such, you should make it a point to try from both side. Dishes arrive sizzling on cast irons, nested in masala dabba tins, and adorned on gold plates. A tapas-style portion pays homage to the street snacks scattered throughout Delhi, and just about everything comes paired with a delicious chutney — we recommend dipping everything into everything. It's rare to find a restaurant where every appetizer, entrée, and dessert feels standout, but Dilli Dilli shows remarkable consistency.",
+    publication: "Forbes India",
+    link: "https://www.forbesindia.com/article/lifes/beyond-butter-chicken-in-america/94739/1",
+    author: "Anoothi Vishal",
+    title: "Beyond butter chicken in America",
+    description: `It was a blockbuster Diwali in New York City for Indian restaurants this year—despite Halloween and the US Presidential campaign coinciding with the five days of festivities.Restaurants were full. Chocolate barfi, pumpkin shorba, blue cheese naan, chaat and even free payasam being sent to tables by generous chefs were being savoured. And customers at the tables included “not just Indian-American families”, as a chef tells me. It was a money spinner for businesses almost in the same way as the festival period is back home. But it was more: A cultural moment. Indian food and culture have never been more in the mainstream in the US before`,
   },
 ];

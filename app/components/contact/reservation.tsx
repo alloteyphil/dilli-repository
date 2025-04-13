@@ -34,10 +34,10 @@ const Reservation = () => {
           <Button
             icon={<Image src={phone} alt="phone" />}
             variant="default"
-            href="tel:+16466698261"
+            href="tel:+19298227049"
             className="flex w-full max-w-full items-center justify-center gap-2"
           >
-            call us on +1 (646) 669-8261
+            call us on +1 (929) 822-7049
           </Button>
         </div>
       </div>
