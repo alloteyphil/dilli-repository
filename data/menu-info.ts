@@ -392,6 +392,7 @@ export const menuInfo = [
           "cucumber syrup",
           "lime juice",
         ],
+        notes: [],
         price: 18,
       },
       {
@@ -402,6 +403,7 @@ export const menuInfo = [
           "milk",
           "pineapple juice",
         ],
+        notes: [],
         price: 18,
       },
       {
@@ -412,6 +414,7 @@ export const menuInfo = [
           "Demerara sugar",
           "lime ginger kombucha",
         ],
+        notes: [],
         price: 19,
       },
       {
@@ -422,6 +425,7 @@ export const menuInfo = [
           "aperol",
           "mango chutney",
         ],
+        notes: [],
         price: 19,
       },
       {
@@ -431,6 +435,7 @@ export const menuInfo = [
           "campari",
           "sweet vermouth",
         ],
+        notes: [],
         price: 20,
       },
       {
@@ -442,6 +447,7 @@ export const menuInfo = [
           "lemon juice",
           "egg white",
         ],
+        notes: [],
         price: 20,
       },
       {
@@ -452,6 +458,7 @@ export const menuInfo = [
           "aromatic bitter",
           "smoked",
         ],
+        notes: [],
         price: 22,
       },
     ],

@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="mx-auto max-w-[2500px] overflow-x-hidden">
         <CartProvider>
-          <Toaster  />
+          <Toaster />
           <Navbar />
           <MobileNavbar />
           <MobileMenuDrawer />

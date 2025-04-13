@@ -81,9 +81,7 @@ const NewsCard = ({
         <Image
           src={photo}
           alt="news photo"
-          className={`absolute top-1/2 left-1/2 z-[3] -translate-x-1/2 -translate-y-1/2 ${
-            photo.id === 1 || photo.id === 2 ? "scale-50" : "scale-75"
-          }`}
+          className={`absolute top-1/2 left-1/2 z-[3] -translate-x-1/2 -translate-y-1/2 scale-85`}
         />
       </div>
       <div className="mx-auto flex max-w-screen flex-col items-center gap-2 px-4 md:max-w-[400px] md:px-0 lg:pt-6 xl:pt-0">

@@ -32,7 +32,15 @@ const page = async ({ params }: { params: Params }) => {
               .map((dish) => (
                 <div key={dish.name} className="flex flex-col">
                   <div className="text-primary flex justify-between">
-                    <p className="text-4xl">{dish.name}</p>
+                    <div className="flex gap-2">
+                      <p className="text-4xl">{dish.name}</p>
+                      {dish.notes.length > 0 && (
+                        <p className="text-accent text-base">
+                          {`(${dish.notes.join(" | ")})`}
+                        </p>
+                      )}
+                    </div>
+
                     <p className="text-4xl">${dish.price}</p>
                   </div>
                   <p className="text-accent max-w-xs text-wrap">
@@ -47,7 +55,14 @@ const page = async ({ params }: { params: Params }) => {
               .map((dish) => (
                 <div key={dish.name} className="flex flex-col">
                   <div className="text-primary flex justify-between">
-                    <p className="text-4xl">{dish.name}</p>
+                    <div className="flex gap-2">
+                      <p className="text-4xl">{dish.name}</p>
+                      {dish.notes.length > 0 && (
+                        <p className="text-accent text-base">
+                          {`(${dish.notes.join(" | ")})`}
+                        </p>
+                      )}
+                    </div>
                     <p className="text-4xl">${dish.price}</p>
                   </div>
                   <p className="text-accent max-w-xs text-wrap">

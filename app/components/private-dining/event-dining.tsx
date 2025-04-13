@@ -8,7 +8,7 @@ const EventDining = () => {
   return (
     <section
       id="event-dining"
-      className="bg-secondary-dark py-[300px] max-md:overflow-x-hidden"
+      className="bg-secondary-dark overflow-x-hidden py-[300px]"
     >
       <div className="boxed relative flex flex-col items-center justify-center gap-15">
         <div className="relative max-w-max">
@@ -28,17 +28,17 @@ const EventDining = () => {
         <Image
           src={event1}
           alt="event1"
-          className="border-secondary-border absolute top-60 left-10 h-[556.87px] w-[374.77px] -translate-x-1/2 -translate-y-1/2 scale-50 -rotate-[10.11deg] border-[14px] object-cover md:left-36 md:scale-75 lg:-left-10 xl:top-70 xl:scale-100"
+          className="border-secondary-border absolute left-10 h-[556.87px] w-[374.77px] -translate-x-1/2 -translate-y-1/2 scale-30 -rotate-[10.11deg] border-[14px] object-cover max-xl:top-[600px] max-md:top-40 md:scale-75 lg:left-30 xl:top-70 xl:-left-10 xl:scale-100"
         />
         <Image
           src={event2}
           alt="event2"
-          className="border-secondary-border absolute -top-30 -right-80 h-[556.87px] w-[374.77px] -translate-x-1/2 -translate-y-1/2 scale-50 rotate-[13.31deg] border-[14px] object-cover md:-top-10 md:-right-80 md:scale-75 lg:-right-40 xl:top-40 xl:-right-[450px] xl:scale-100"
+          className="border-secondary-border absolute -top-30 -right-80 h-[556.87px] w-[374.77px] -translate-x-1/2 -translate-y-1/2 scale-50 rotate-[13.31deg] border-[14px] object-cover md:-top-30 md:-right-80 md:scale-45 lg:-top-30 lg:right-0 xl:top-40 xl:-right-[450px] xl:scale-100"
         />
         <Image
           src={event3}
           alt="event3"
-          className="border-secondary-border absolute -right-40 -bottom-10 h-[350px] w-[341px] scale-50 -rotate-[10.11deg] border-[14px] object-cover md:right-40 md:-bottom-40 xl:-bottom-30 xl:scale-100"
+          className="border-secondary-border absolute -right-40 -bottom-10 h-[350px] w-[341px] scale-50 -rotate-[10.11deg] border-[14px] object-cover md:-right-10 md:-bottom-40 xl:-bottom-30 xl:scale-100"
         />
       </div>
     </section>
