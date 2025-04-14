@@ -1,5 +1,3 @@
-import Image from "next/image";
-import instagram from "@/public/images/InstagramLogo.svg";
 import Link from "next/link";
 
 const FooterCarouselCard = ({ photo }: { photo: string }) => {
