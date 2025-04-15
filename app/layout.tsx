@@ -7,6 +7,7 @@ import { CartProvider } from "@/context/CartContext";
 import MobileNavbar from "./components/mobile/navbar/mobile-navbar";
 import MobileMenuDrawer from "./components/mobile/navbar/mobile-menu-drawer";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Dilli Dilli",
@@ -28,6 +29,7 @@ export default function RootLayout({
           <MobileNavbar />
           <MobileMenuDrawer />
           {children}
+          <SpeedInsights />
           <Footer />
         </CartProvider>
       </body>
