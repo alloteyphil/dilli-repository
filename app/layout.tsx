@@ -29,9 +29,9 @@ export default function RootLayout({
           <MobileNavbar />
           <MobileMenuDrawer />
           {children}
-          <SpeedInsights />
           <Footer />
         </CartProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
