@@ -4,6 +4,7 @@ import innerBorder from "@/public/images/newsinnerborder.svg";
 import tag1 from "@/public/images/newstag1.svg";
 import tag2 from "@/public/images/newstag2.svg";
 import tag3 from "@/public/images/newstag3.svg";
+import forbesLogo from "@/public/images/forbes-logo.svg";
 import { news } from "@/data/news";
 import Link from "next/link";
 
@@ -41,9 +42,9 @@ const News = () => {
                 />
               ) : (
                 <Image
-                  src={tag3}
+                  src={forbesLogo}
                   alt="tag3"
-                  className="absolute -top-10 -right-20 z-10 scale-75 md:scale-100 lg:top-80 lg:-left-24 xl:-top-20 xl:left-40"
+                  className="absolute -top-10 -right-20 z-10 scale-75 rotate-[5deg] md:scale-100 lg:top-80 lg:-left-24 xl:-top-20 xl:left-40"
                 />
               )}
             </div>

@@ -30,6 +30,7 @@ export const news = [
     link: "https://www.forbesindia.com/article/lifes/beyond-butter-chicken-in-america/94739/1",
     author: "Anoothi Vishal",
     title: "Beyond butter chicken in America",
-    description: `It was a blockbuster Diwali in New York City for Indian restaurants this year—despite Halloween and the US Presidential campaign coinciding with the five days of festivities.Restaurants were full. Chocolate barfi, pumpkin shorba, blue cheese naan, chaat and even free payasam being sent to tables by generous chefs were being savoured. And customers at the tables included “not just Indian-American families”, as a chef tells me. It was a money spinner for businesses almost in the same way as the festival period is back home. But it was more: A cultural moment. Indian food and culture have never been more in the mainstream in the US before`,
+    description:
+      "Dilli Dilli, a restaurant that is about to open in New York City, by chef Vipul Gupta, ex-ITC hotels, and chef-restaurateur Gaurav Anand, has been focussing its social media communication on explaining to guests the difference between old Delhi and new Delhi cuisines—one Mughlai, the other Punjabi; a difference that many even in Delhi are unaware of.",
   },
 ];
