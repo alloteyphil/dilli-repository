@@ -64,14 +64,6 @@ const MobileMenuDrawer = () => {
           <Link
             prefetch={true}
             scroll={false}
-            href="/private-dining#event-dining"
-            onClick={() => setIsOpen(false)}
-          >
-            <p className="md:text-2xl">event catering</p>
-          </Link>
-          <Link
-            prefetch={true}
-            scroll={false}
             href="/contact"
             className="text-accent"
             onClick={() => setIsOpen(false)}
