@@ -12,10 +12,6 @@ export const menuLinks = [
     href: "/large-plates",
   },
   {
-    name: "Brunch",
-    href: "/brunch",
-  },
-  {
     name: "Bread",
     href: "/bread",
   },
@@ -30,5 +26,9 @@ export const menuLinks = [
   {
     name: "Cocktails",
     href: "/cocktails",
+  },
+  {
+    name: "Brunch",
+    href: "/brunch",
   },
 ];

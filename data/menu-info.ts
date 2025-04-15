@@ -383,9 +383,10 @@ export const menuInfo = [
   },
   {
     title: "Cocktails",
+    slug: "cocktails",
     dishes: [
       {
-        name: "DILLI MARGARITA",
+        name: "Golgappa Margarita",
         ingredients: [
           "Bee pollen infused Tequila",
           "pani puri masala",
@@ -396,18 +397,18 @@ export const menuInfo = [
         price: 18,
       },
       {
-        name: "NAWABI KOLADA",
+        name: "Nawabi Kolada",
         ingredients: [
-          "Dilli Dilli spiced coconut rum",
+          "Spiced coconut rum",
           "curry cordial",
           "milk",
           "pineapple juice",
         ],
-        notes: [],
+        notes: ["DAIRY"],
         price: 18,
       },
       {
-        name: "INDIA GATE VOYAGE",
+        name: "India Gate Voyage",
         ingredients: [
           "SmokeLab Saffron Vodka",
           "Amaretto liquor",
@@ -418,7 +419,7 @@ export const menuInfo = [
         price: 19,
       },
       {
-        name: "GOLDEN HOUR",
+        name: "Golden Hour",
         ingredients: [
           "Astral Bianco Tequila",
           "orange blossom",
@@ -429,7 +430,7 @@ export const menuInfo = [
         price: 19,
       },
       {
-        name: "DELHI NEGRONI",
+        name: "Delhi Negroni",
         ingredients: [
           "Patchouli infused Arbikie Ak's Gin",
           "campari",
@@ -439,7 +440,7 @@ export const menuInfo = [
         price: 20,
       },
       {
-        name: "DILLI'S KISS",
+        name: "Dilli's Kiss",
         ingredients: [
           "SmokeLab Saffron Vodka",
           "passion fruit",
@@ -447,11 +448,11 @@ export const menuInfo = [
           "lemon juice",
           "egg white",
         ],
-        notes: [],
+        notes: ["EGG"],
         price: 20,
       },
       {
-        name: "OLD INDIA",
+        name: "Old India",
         ingredients: [
           "Woodford Reserve Bourbon",
           "tonka cordial",
@@ -462,6 +463,259 @@ export const menuInfo = [
         price: 22,
       },
     ],
-    slug: "cocktails",
   },
 ];
+
+export const brunchMenuInfo = {
+  title: "Brunch",
+  slug: "brunch",
+  dishes: {
+    oldDelhi: [
+      {
+        name: "Delhi’s All Time Fave - Channa Bhatura",
+        ingredients: [
+          "Tea leaf chickpea masala",
+          "Blended spice mix",
+          "Fluffy fried bhatura",
+          "Carrot pickle",
+          "Yogurt",
+        ],
+        notes: [],
+        price: 22.5,
+      },
+      {
+        name: "Chawri Bazar’s - Bedmi Poori Subzi",
+        ingredients: [
+          "Old Delhi style spicy potato curry",
+          "Fried lentil poori",
+          "Carrot pickle",
+          "Carrot",
+        ],
+        notes: [],
+        price: 21.5,
+      },
+    ],
+    newDelhi: [
+      {
+        name: "Masala Avocado Croissant",
+        ingredients: [
+          "Sliced avocado",
+          "Sriracha mayo",
+          "Mirchi masala",
+          "Fried egg",
+          "Pickled onions",
+          "Grated Amul cheese",
+        ],
+        notes: [],
+        price: 18.5,
+      },
+      {
+        name: "Hari Mirch Bhurji Bowl",
+        ingredients: [
+          "Three scrambled eggs (Indian style)",
+          "Chopped green chillies",
+          "Red onions",
+          "Fresh cilantro",
+          "Seasoned potatoes",
+          "Toast",
+        ],
+        notes: [],
+        price: 18.5,
+      },
+      {
+        name: "Delhi Railway Station Bread Omelette",
+        ingredients: [
+          "Chopped tomatoes",
+          "Onions",
+          "Cilantro",
+          "Chilies",
+          "Amul butter",
+        ],
+        notes: [],
+        price: 16.5,
+      },
+    ],
+    specials: {
+      oldDelhiSpecials: [
+        {
+          name: "Weekend Rice Bowls",
+          ingredients: ["Served with kachumber salad", "Boondi raita"],
+          options: [
+            {
+              name: "Dehlavi Chicken Biryani",
+              notes: [],
+              price: 22.5,
+            },
+            {
+              name: "Mutton Chawal",
+              notes: [],
+              price: 25.5,
+            },
+            {
+              name: "Pressure Cooker Vegetable Pulao",
+              notes: [],
+              price: 21.5,
+            },
+          ],
+        },
+        {
+          name: "Murthal Ke Paranthe",
+          ingredients: [
+            "Tandoori stuffed paratha",
+            "Whipped white butter",
+            "Carrot and radish pickle",
+          ],
+          options: [
+            { name: "Aloo Pyaaz", price: 15.5 },
+            { name: "Gobi", price: 15.5 },
+            { name: "Paneer", price: 16.5 },
+            { name: "Add side of Cholle or Aloo Bhaji", price: 8.5 },
+          ],
+        },
+      ],
+      newDelhiSpecials: [
+        {
+          name: "South Delhi’s Burger Brunch",
+          ingredients: ["Seasoned fries", "Coleslaw", "Hot ketchup"],
+          options: [
+            {
+              name: "Veggie Smash Burger",
+              price: 21.5,
+            },
+            {
+              name: "Delhi Famous Kent’s Seekh Kabab Burger",
+              price: 24.5,
+            },
+          ],
+        },
+        {
+          name: "Roll Me One",
+          ingredients: [
+            "Roomali roti rolls",
+            "Spicy mint mayo",
+            "Laccha salad",
+            "Lemon",
+            "Seasoned fries",
+          ],
+          options: [
+            { name: "Paneer Tikka Roll", price: 16.5 },
+            { name: "Chicken Tikka Roll", price: 16.5 },
+            { name: "Mutton Seekh Roll", price: 18.5 },
+          ],
+        },
+      ],
+    },
+    sides: [
+      {
+        name: "Delhi Golf Club Potato Chips",
+        notes: [],
+        price: 9.5,
+      },
+      {
+        name: "Boondi Raita",
+        notes: [],
+        price: 5.5,
+      },
+      {
+        name: "Housemade Pickle",
+        notes: [],
+        price: 5.5,
+      },
+      {
+        name: "Peanut Masala",
+        notes: [],
+        price: 6.5,
+      },
+    ],
+    drinks: {
+      spiritFree: [
+        {
+          name: "Dilli Dilli Lassi",
+          ingredients: ["Sweet", "Mango", "Masala (choice)"],
+          notes: [],
+          price: 11.5,
+        },
+        {
+          name: "Kadai Wala Doodh",
+          ingredients: ["Hot milk", "Saffron", "Almonds"],
+          notes: [],
+          price: 12.5,
+        },
+        {
+          name: "Karol Bagh’s Masala Soda",
+          ingredients: ["Soda", "Masala blend", "Lime"],
+          notes: [],
+          price: 10.5,
+        },
+      ],
+      alcoholic: [
+        {
+          name: "The De Lu-Lu",
+          ingredients: [
+            "Tequila",
+            "Lulu fruit purée",
+            "Saint Germain",
+            "Lime juice",
+          ],
+          notes: [],
+          price: 19,
+        },
+        {
+          name: "Chef’s Kiss",
+          ingredients: ["Tamarind", "Prosecco", "Cardamom syrup", "Turmeric"],
+          notes: [],
+          price: 19,
+        },
+        {
+          name: "Spiced Chai-Tini",
+          ingredients: [
+            "Vodka",
+            "Chai concentrate",
+            "Milk",
+            "Amaretto liqueur",
+          ],
+          notes: [],
+          price: 19,
+        },
+        {
+          name: "Dilli Spritz",
+          ingredients: ["Aperol", "Lulu fruit purée", "Cointreau", "Prosecco"],
+          notes: [],
+          price: 15,
+        },
+      ],
+    },
+    caffeine: [
+      {
+        name: "Bus Stop Chai",
+        notes: [],
+        price: 7.5,
+      },
+      {
+        name: "Iced Chai Latte",
+        notes: [],
+        price: 12.5,
+      },
+      {
+        name: "Iced Latte",
+        notes: [],
+        price: 12.5,
+      },
+      {
+        name: "Cappuccino",
+        notes: [],
+        price: 8,
+      },
+      {
+        name: "Black Coffee",
+        notes: [],
+        price: 6.5,
+      },
+      {
+        name: "Herbal Tea",
+        notes: [],
+        price: 6.5,
+      },
+    ],
+  },
+};

@@ -1,4 +1,5 @@
 import { menuInfo } from "@/data/menu-info";
+import Brunch from "@/app/components/menu/brunch";
 
 type Params = Promise<{
   slug: string;
@@ -6,6 +7,10 @@ type Params = Promise<{
 
 const page = async ({ params }: { params: Params }) => {
   const { slug } = await params;
+
+  if (slug === "brunch") {
+    return <Brunch />;
+  }
 
   let menu = menuInfo.find((item) => item.slug === slug);
 
@@ -49,6 +54,7 @@ const page = async ({ params }: { params: Params }) => {
                 </div>
               ))}
           </div>
+
           <div className="flex flex-col gap-6 pt-20">
             {menu.dishes
               .slice(Math.ceil(menu.dishes.length / 2))
