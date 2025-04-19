@@ -2,6 +2,10 @@
 
 import { useState, useCallback, useEffect } from "react";
 import PopupCard from "./popup-card";
+import {
+  getPopupCookie,
+  setPopupCookie,
+} from "@/actions/popup/popup-cookie.actions";
 
 interface PopupProps {
   title?: string;
@@ -22,40 +26,77 @@ export const Popup = ({
 }: PopupProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const checkHasBeenClosed = useCallback(() => {
+  /**
+   * Checks if the popup has been previously closed by the user
+   * by verifying the existence and validity of the popup cookie
+   */
+  const checkHasBeenClosed = useCallback(async () => {
     if (typeof window !== "undefined") {
-      const popupClosed = localStorage.getItem("popupClosed");
-      return popupClosed && new Date().getTime() < Number(popupClosed);
+      const popupClosed = await getPopupCookie();
+
+      return new Date().getTime() > Number(popupClosed?.value);
     }
     return false;
   }, []);
 
+  /**
+   * Determines if the popup should no longer be shown
+   * based on the provided expiry date
+   */
   const hasExpired = useCallback(() => {
     if (!expiryDate) return false;
+
     const expiry =
       expiryDate instanceof Date ? expiryDate : new Date(expiryDate);
+
     return expiry < new Date();
   }, [expiryDate]);
 
-  const showPopup = useCallback(() => {
-    if (checkHasBeenClosed() || hasExpired()) return;
+  /**
+   * Shows the popup if it hasn't been closed before
+   * and hasn't expired
+   */
+  const showPopup = useCallback(async () => {
+    const closed = await checkHasBeenClosed();
+
+    if (closed || hasExpired()) return;
+
     setIsVisible(true);
   }, [checkHasBeenClosed, hasExpired]);
 
-  const hidePopup = useCallback(() => {
+  /**
+   * Hides the popup and sets a cookie to remember
+   * that the user has closed it
+   */
+  const hidePopup = useCallback(async () => {
     if (!isVisible) return;
 
     setIsVisible(false);
-    localStorage.setItem("popupClosed", new Date().getTime().toString());
+
+    await setPopupCookie();
   }, [isVisible]);
 
+  /**
+   * Automatically shows the popup after a delay
+   * if autoShow is true and the popup hasn't been
+   * closed or expired
+   */
   useEffect(() => {
-    console.log(isVisible);
-    if (!autoShow || checkHasBeenClosed() || hasExpired()) return;
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
-    return () => clearTimeout(timer);
+    if (!autoShow || hasExpired()) return;
+
+    const initPopup = async () => {
+      const closed = await checkHasBeenClosed();
+
+      if (!closed) {
+        const timer = setTimeout(() => {
+          setIsVisible(true);
+        }, delay);
+
+        return () => clearTimeout(timer);
+      }
+    };
+
+    initPopup();
   }, [autoShow, delay, checkHasBeenClosed, hasExpired]);
 
   if (!isVisible) return null;

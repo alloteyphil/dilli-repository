@@ -11,7 +11,7 @@ const ResyButton = ({ className }: { className?: string }) => {
       target="_blank"
       className={cn("focus:ring-0 focus:outline-none", className)}
     >
-      <button className="text-primary-light cursor-pointer rounded-none bg-[#FF462D] px-8 py-4 focus:ring-0 focus:outline-none">
+      <button className="text-primary-light bg-accent cursor-pointer rounded-none px-8 py-4 focus:ring-0 focus:outline-none">
         <p className="">Book Now</p>
       </button>
     </Link>
