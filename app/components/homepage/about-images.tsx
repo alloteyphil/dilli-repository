@@ -9,7 +9,7 @@ import AnimateWrapper from "../shared/animate-wrapper";
 
 const AboutImages = () => {
   return (
-    <div className="intersect:animate-fade intersect-once animate-delay-600 flex gap-4 px-4 md:px-8 xl:px-0">
+    <div className="intersect:animate-fade-up intersect-once animate-delay-400 flex gap-4 px-4 md:px-8 xl:px-0">
       <Image
         src={aboutImage1}
         className="hidden h-[450px] rounded-full object-cover object-bottom xl:block"
