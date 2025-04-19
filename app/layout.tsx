@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className="mx-auto max-w-[2500px] overflow-x-hidden">
         <Analytics />
         <Popup
-          delay={7000}
+          delay={4000}
           expiryDate={new Date("2025-04-20T23:59:59")}
           contentClassName=" xl:scale-90"
         >

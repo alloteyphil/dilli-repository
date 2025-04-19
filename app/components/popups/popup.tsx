@@ -25,7 +25,7 @@ export const Popup = ({
   const checkHasBeenClosed = useCallback(() => {
     if (typeof window !== "undefined") {
       const popupClosed = localStorage.getItem("popupClosed");
-      return popupClosed && new Date().getTime() > Number(popupClosed);
+      return popupClosed && new Date().getTime() < Number(popupClosed);
     }
     return false;
   }, []);
