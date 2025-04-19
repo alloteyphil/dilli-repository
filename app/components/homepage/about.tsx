@@ -6,7 +6,7 @@ const About = () => {
     <section className="bg-accent py-[72px]">
       <div className="flex flex-col gap-10">
         <div className="boxed flex w-full flex-col gap-2 xl:flex-row xl:justify-between xl:gap-0">
-          <div className="relative max-w-max">
+          <div className="intersect:animate-fade-down intersect-once animate-delay-200 relative max-w-max">
             <h1 className="text-secondary text-7xl leading-none md:text-8xl xl:text-[148px]">
               About
               <br />
@@ -16,7 +16,8 @@ const About = () => {
               India’s food capital
             </p>
           </div>
-          <div className="pt-6">
+
+          <div className="intersect:animate-fade-up intersect-once animate-delay-400 pt-6">
             <p className="text-secondary max-w-[500px]">
               <span className="italic">It all began with a vision</span> — a
               desire to share the forgotten flavors of Delhi's rich culinary

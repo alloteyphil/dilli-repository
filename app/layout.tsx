@@ -10,6 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Popup } from "./components/popups/popup";
 import BrunchPopup from "./components/popups/brunch-popup";
+import AnimateWrapper from "./components/shared/animate-wrapper";
 
 export const metadata: Metadata = {
   title: "Dilli Dilli",
@@ -25,22 +26,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="mx-auto max-w-[2500px] overflow-x-hidden">
-        <Analytics />
-        <Popup
-          delay={4000}
-          expiryDate={new Date("2025-04-20T23:59:59")}
-          contentClassName=" xl:scale-90"
-        >
-          <BrunchPopup />
-        </Popup>
-        <CartProvider>
-          <Toaster />
-          <Navbar />
-          <MobileNavbar />
-          <MobileMenuDrawer />
-          {children}
-          <Footer />
-        </CartProvider>
+        <AnimateWrapper>
+          <Analytics />
+          <Popup
+            delay={4000}
+            expiryDate={new Date("2025-04-20T23:59:59")}
+            contentClassName=" xl:scale-90"
+          >
+            <BrunchPopup />
+          </Popup>
+          <CartProvider>
+            <Toaster />
+            <Navbar />
+            <MobileNavbar />
+            <MobileMenuDrawer />
+            {children}
+            <Footer />
+          </CartProvider>
+        </AnimateWrapper>
         <SpeedInsights />
       </body>
     </html>

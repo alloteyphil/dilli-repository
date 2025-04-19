@@ -5,10 +5,11 @@ import aboutImage3 from "@/public/images/about-3-resized.png";
 import aboutImage4 from "@/public/images/about-4-resized.png";
 import aboutImage5 from "@/public/images/about-5-resized.png";
 import spark from "@/public/images/spark.svg";
+import AnimateWrapper from "../shared/animate-wrapper";
 
 const AboutImages = () => {
   return (
-    <div className="flex gap-4 px-4 md:px-8 xl:px-0">
+    <div className="intersect:animate-fade intersect-once animate-delay-600 flex gap-4 px-4 md:px-8 xl:px-0">
       <Image
         src={aboutImage1}
         className="hidden h-[450px] rounded-full object-cover object-bottom xl:block"
